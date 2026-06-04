@@ -220,23 +220,23 @@ document
   .getElementById('buscaDss')
   .addEventListener('keyup', aplicarFiltrosDss);
 // MENU MOBILE
-// MENU MOBILE
+// MENU MOBILE - DSS
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menuToggle');
   const sidebar = document.getElementById('sidebar');
 
   if (menuBtn && sidebar) {
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       sidebar.classList.toggle('active');
     });
 
-    document.addEventListener('click', (e) => {
-      const clicouMenu = sidebar.contains(e.target);
-      const clicouBotao = menuBtn.contains(e.target);
+    sidebar.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
 
-      if (!clicouMenu && !clicouBotao) {
-        sidebar.classList.remove('active');
-      }
+    document.addEventListener('click', () => {
+      sidebar.classList.remove('active');
     });
   }
 });
