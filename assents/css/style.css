@@ -488,3 +488,68 @@ RESPONSIVO
     white-space: nowrap !important;
   }
 }
+@media (max-width: 768px) {
+  table {
+    display: table !important;
+    width: 100% !important;
+    table-layout: fixed !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+  th,
+  td {
+    padding: 8px 4px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  th {
+    font-size: 10px !important;
+  }
+
+  td a {
+    font-size: 10px !important;
+    word-break: break-word !important;
+  }
+
+  /* Larguras da tabela ESS */
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    width: 22%;
+  }
+
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    width: 24%;
+  }
+
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    width: 18%;
+  }
+
+  table th:nth-child(4),
+  table td:nth-child(4),
+  table th:nth-child(5),
+  table td:nth-child(5) {
+    width: 10%;
+  }
+
+  table th:nth-child(6),
+  table td:nth-child(6) {
+    width: 12%;
+  }
+
+  table th:nth-child(7),
+  table td:nth-child(7) {
+    width: 6%;
+  }
+
+  .status {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
