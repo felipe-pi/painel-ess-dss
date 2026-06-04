@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Painel DSS</title>
+
+    <link rel="stylesheet" href="assents/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="logo-sidebar">
+        📊
+        <h2>ESS</h2>
+      </div>
+
+      <nav>
+        <a href="index.html" class="menu-item">
+          <i class="fa-solid fa-chart-column"></i>
+          Dashboard
+        </a>
+        <a href="dss.html" class="menu-item active">
+          <i class="fa-solid fa-comments"></i>
+          DSS
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-building"></i>
+          Área Executiva
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          Calendário
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-users"></i>
+          Inspetores
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-bullseye"></i>
+          Metas
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-ranking-star"></i>
+          Ranking
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="container">
+        <h1>💬 Painel DSS</h1>
+
+        <p class="atualizado">
+          Atualizado em:
+          <span id="atualizadoDss"></span>
+        </p>
+
+        <div class="filtros">
+          <input
+            type="text"
+            id="buscaDss"
+            placeholder="Digite nome, matrícula ou área"
+          />
+
+          <select id="areaFiltroDss">
+            <option value="">Todas as áreas</option>
+          </select>
+
+          <div class="filtros-data">
+            <input type="date" id="dataInicioDss" />
+            <input type="date" id="dataFimDss" />
+            <button id="btnAplicarDss">Atualizar</button>
+          </div>
+        </div>
+
+        <div class="cards cards-5">
+          <div class="card">
+            <h3>Áreas</h3>
+            <p id="areasDss">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Meta DSS</h3>
+            <p id="metaDss">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Realizado</h3>
+            <p id="realizadoDss">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Performance</h3>
+            <p id="performanceDss">0%</p>
+          </div>
+
+          <div class="card">
+            <h3>Participantes</h3>
+            <p id="participantesDss">0</p>
+          </div>
+        </div>
+
+        <h2 class="titulo-secao">Resumo por Área</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Área</th>
+              <th>Qtd.</th>
+              <th>Meta</th>
+              <th>Realizado</th>
+              <th>Gap</th>
+              <th>Performance</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelaAreasDss"></tbody>
+        </table>
+
+        <h2 class="titulo-secao">Resumo por Colaborador</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Matrícula</th>
+              <th>Colaborador</th>
+              <th>Área</th>
+              <th>DSS Realizados</th>
+              <th>Participantes</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelaColaboradoresDss"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="assents/js/dss.js"></script>
+  </body>
+</html>

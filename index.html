@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Painel ESS</title>
+
+    <link rel="stylesheet" href="./assents/css/style.css" />
+
+    <!-- Ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo-sidebar">
+        📊
+        <h2>ESS</h2>
+      </div>
+
+      <nav>
+        <a href="#" class="menu-item active">
+          <i class="fa-solid fa-chart-column"></i>
+          Dashboard
+        </a>
+        <a href="dss.html" class="menu-item">
+          <i class="fa-solid fa-comments"></i>
+          DSS
+        </a>
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-building"></i>
+          Área Executiva
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          Calendário
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-users"></i>
+          Inspetores
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-bullseye"></i>
+          Metas
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-ranking-star"></i>
+          Ranking
+        </a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main-content">
+      <div class="container">
+        <h1>📊 Painel ESS</h1>
+
+        <p class="atualizado">
+          Atualizado em:
+          <span id="atualizado"></span>
+        </p>
+
+        <!-- FILTROS -->
+        <div class="filtros">
+          <input
+            type="text"
+            id="busca"
+            placeholder="Digite matrícula ou nome"
+          />
+
+          <select id="areaFiltro">
+            <option value="">Todas as áreas</option>
+
+            <option value="STC">STC</option>
+
+            <option value="MANUTENÇÃO">Manutenção</option>
+
+            <option value="RECUPERAÇÃO">Recuperação</option>
+          </select>
+          <div class="filtros-data">
+            <input type="date" id="dataInicio" />
+
+            <input type="date" id="dataFim" />
+
+            <button id="btnAplicar">Atualizar</button>
+          </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="cards">
+          <div class="card">
+            <h3>Colaboradores</h3>
+            <p id="colaboradores">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Meta Geral</h3>
+            <p id="metaGeral">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Realizado</h3>
+            <p id="realizadoGeral">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Performance</h3>
+            <p id="performanceGeral">0%</p>
+          </div>
+        </div>
+
+        <!-- TABELA -->
+        <table>
+          <thead>
+            <tr>
+              <th>Matrícula</th>
+              <th>Inspetor</th>
+              <th>Área</th>
+              <th>Meta</th>
+              <th>Realizado</th>
+              <th>Performance</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelaInspetores"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./assents/js/app.js"></script>
+  </body>
+</html>
