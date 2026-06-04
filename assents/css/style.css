@@ -393,3 +393,96 @@ RESPONSIVO
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 72px;
+    padding: 20px 10px;
+  }
+
+  .sidebar h2,
+  .menu-item span,
+  .menu-item {
+    font-size: 0;
+  }
+
+  .menu-item i {
+    font-size: 22px;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  .main-content {
+    margin-left: 72px;
+    padding: 24px 14px;
+  }
+
+  h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .filtros {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filtros input,
+  .filtros select,
+  .filtros button {
+    width: 100%;
+  }
+
+  .filtros-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .filtros-data button {
+    grid-column: span 2;
+  }
+
+  .cards,
+  .cards-5 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 28px 18px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 48px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
