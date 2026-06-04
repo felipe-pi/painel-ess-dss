@@ -552,4 +552,60 @@ RESPONSIVO
       height: 10px !important;
     }
   }
+  /* ==========================
+   MENU RESPONSIVO MOBILE
+========================== */
+
+  .mobile-header {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background: #08163a;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 2000;
+    }
+
+    .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    /* Sidebar escondida */
+    .sidebar {
+      position: fixed;
+      left: -260px;
+      top: 0;
+      width: 250px;
+      height: 100vh;
+      z-index: 3000;
+      transition: 0.3s ease;
+    }
+
+    /* Quando abrir */
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* empurra o conteúdo */
+    .main-content {
+      margin-left: 0 !important;
+      padding-top: 90px;
+    }
+
+    /* textos do menu reaparecem */
+    .sidebar span {
+      display: inline;
+    }
+  }
 }

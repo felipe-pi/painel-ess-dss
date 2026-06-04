@@ -182,3 +182,22 @@ document
   .getElementById('areaFiltro')
   .addEventListener('change', aplicarFiltros);
 document.getElementById('btnAplicar').addEventListener('click', aplicarFiltros);
+// MENU MOBILE
+const menuBtn = document.getElementById('menuToggle');
+const sidebar = document.getElementById('sidebar');
+
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+
+  // Fecha clicando fora
+  document.addEventListener('click', (e) => {
+    const clicouNoMenu = sidebar.contains(e.target);
+    const clicouBotao = menuBtn.contains(e.target);
+
+    if (!clicouNoMenu && !clicouBotao) {
+      sidebar.classList.remove('active');
+    }
+  });
+}
