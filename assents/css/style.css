@@ -484,3 +484,29 @@ h1 {
     height: 10px !important;
   }
 }
+/* ===== AJUSTE MOBILE MENU ===== */
+@media (max-width: 768px) {
+  .mobile-header {
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 12px !important;
+    z-index: 2500 !important;
+  }
+
+  .menu-btn {
+    position: fixed !important;
+    top: 14px !important;
+    left: 14px !important;
+    z-index: 4001 !important;
+  }
+
+  .sidebar {
+    padding-top: 90px !important;
+    z-index: 3000 !important;
+  }
+
+  .sidebar.active {
+    left: 0 !important;
+  }
+}
