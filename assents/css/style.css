@@ -396,93 +396,95 @@ RESPONSIVO
 @media (max-width: 768px) {
   body {
     padding: 0;
+    overflow-x: hidden;
   }
 
   .sidebar {
-    width: 72px;
-    padding: 20px 10px;
+    width: 70px !important;
+    min-width: 70px !important;
+    padding: 18px 8px !important;
+    overflow: hidden !important;
   }
 
-  .sidebar h2,
-  .menu-item span,
+  .logo-sidebar h2 {
+    display: none !important;
+  }
+
   .menu-item {
-    font-size: 0;
+    width: 52px !important;
+    height: 52px !important;
+    padding: 0 !important;
+    margin: 10px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    font-size: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
   }
 
   .menu-item i {
-    font-size: 22px;
+    font-size: 22px !important;
+    margin: 0 !important;
   }
 
-  .menu-item {
-    justify-content: center;
-    padding: 16px 0;
+  .menu-item span,
+  .menu-item h2,
+  .menu-item p {
+    display: none !important;
   }
 
-  .main-content {
-    margin-left: 72px;
-    padding: 24px 14px;
+  .main-content,
+  .container {
+    margin-left: 70px !important;
+    width: calc(100vw - 70px) !important;
+    max-width: calc(100vw - 70px) !important;
+    padding: 22px 12px !important;
   }
 
   h1 {
-    font-size: 42px;
+    font-size: 42px !important;
     text-align: center;
   }
 
   .filtros {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
   }
 
   .filtros input,
   .filtros select,
   .filtros button {
-    width: 100%;
+    width: 100% !important;
   }
 
   .filtros-data {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
   }
 
   .filtros-data button {
-    grid-column: span 2;
+    grid-column: 1 / -1 !important;
   }
 
   .cards,
   .cards-5 {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
   }
 
   .card {
-    padding: 28px 18px;
-  }
-
-  .card h3 {
-    font-size: 24px;
-  }
-
-  .card p {
-    font-size: 48px;
+    width: 100% !important;
   }
 
   table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-  }
-
-  th,
-  td {
-    padding: 14px 18px;
-    font-size: 14px;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 100%;
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
   }
 }
