@@ -366,92 +366,67 @@ h1 {
     flex-direction: column;
   }
 }
-/* =====================
-RESPONSIVO
-===================== */
+/* =======================
+   RESPONSIVO MOBILE
+======================= */
 
-@media (max-width: 900px) {
-  body {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .busca-box input {
-    width: 100%;
-  }
-
-  th,
-  td {
-    padding: 12px;
-    font-size: 14px;
-  }
+.mobile-header {
+  display: none;
 }
+
 @media (max-width: 768px) {
   body {
     padding: 0;
     overflow-x: hidden;
   }
 
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    background: #08163a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+  }
+
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
   .sidebar {
-    width: 70px !important;
-    min-width: 70px !important;
-    padding: 18px 8px !important;
-    overflow: hidden !important;
+    position: fixed !important;
+    left: -260px !important;
+    top: 0;
+    width: 250px !important;
+    height: 100vh;
+    z-index: 3000;
+    transition: 0.3s ease;
   }
 
-  .logo-sidebar h2 {
-    display: none !important;
-  }
-
-  .menu-item {
-    width: 52px !important;
-    height: 52px !important;
-    padding: 0 !important;
-    margin: 10px auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0 !important;
-    font-size: 0 !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-  }
-
-  .menu-item i {
-    font-size: 22px !important;
-    margin: 0 !important;
-  }
-
-  .menu-item span,
-  .menu-item h2,
-  .menu-item p {
-    display: none !important;
+  .sidebar.active {
+    left: 0 !important;
   }
 
   .main-content,
   .container {
-    margin-left: 70px !important;
-    width: calc(100vw - 70px) !important;
-    max-width: calc(100vw - 70px) !important;
-    padding: 22px 12px !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 85px 12px 20px 12px !important;
   }
 
   h1 {
-    font-size: 42px !important;
-    text-align: center;
+    font-size: 38px !important;
   }
 
   .filtros {
-    display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
     width: 100% !important;
   }
 
@@ -459,6 +434,7 @@ RESPONSIVO
   .filtros select,
   .filtros button {
     width: 100% !important;
+    min-width: 0 !important;
   }
 
   .filtros-data {
@@ -474,138 +450,30 @@ RESPONSIVO
   .cards,
   .cards-5 {
     grid-template-columns: 1fr !important;
-    width: 100% !important;
-  }
-
-  .card {
-    width: 100% !important;
   }
 
   table {
-    display: block !important;
+    display: table !important;
     width: 100% !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-  }
-  @media (max-width: 768px) {
-    table {
-      display: table !important;
-      width: 100% !important;
-      table-layout: fixed !important;
-      overflow: visible !important;
-      white-space: normal !important;
-    }
-
-    th,
-    td {
-      padding: 8px 4px !important;
-      font-size: 10px !important;
-      line-height: 1.15 !important;
-      word-break: break-word !important;
-      white-space: normal !important;
-    }
-
-    th {
-      font-size: 10px !important;
-    }
-
-    td a {
-      font-size: 10px !important;
-      word-break: break-word !important;
-    }
-
-    /* Larguras da tabela ESS */
-    table th:nth-child(1),
-    table td:nth-child(1) {
-      width: 22%;
-    }
-
-    table th:nth-child(2),
-    table td:nth-child(2) {
-      width: 24%;
-    }
-
-    table th:nth-child(3),
-    table td:nth-child(3) {
-      width: 18%;
-    }
-
-    table th:nth-child(4),
-    table td:nth-child(4),
-    table th:nth-child(5),
-    table td:nth-child(5) {
-      width: 10%;
-    }
-
-    table th:nth-child(6),
-    table td:nth-child(6) {
-      width: 12%;
-    }
-
-    table th:nth-child(7),
-    table td:nth-child(7) {
-      width: 6%;
-    }
-
-    .status {
-      width: 10px !important;
-      height: 10px !important;
-    }
-  }
-  /* ==========================
-   MENU RESPONSIVO MOBILE
-========================== */
-
-  .mobile-header {
-    display: none;
+    table-layout: fixed !important;
+    white-space: normal !important;
   }
 
-  @media (max-width: 768px) {
-    .mobile-header {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      background: #08163a;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 2000;
-    }
+  th,
+  td {
+    padding: 8px 4px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
 
-    .menu-btn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 28px;
-      cursor: pointer;
-      margin-right: 15px;
-    }
+  td a {
+    font-size: 10px !important;
+  }
 
-    /* Sidebar escondida */
-    .sidebar {
-      position: fixed;
-      left: -260px;
-      top: 0;
-      width: 250px;
-      height: 100vh;
-      z-index: 3000;
-      transition: 0.3s ease;
-    }
-
-    /* Quando abrir */
-    .sidebar.active {
-      left: 0;
-    }
-
-    /* empurra o conteúdo */
-    .main-content {
-      margin-left: 0 !important;
-      padding-top: 90px;
-    }
-
-    /* textos do menu reaparecem */
-    .sidebar span {
-      display: inline;
-    }
+  .status {
+    width: 10px !important;
+    height: 10px !important;
   }
 }
