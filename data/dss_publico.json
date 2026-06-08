@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "03/06/2026 22:25",
+    "atualizado_em": "08/06/2026 08:40",
     "metas_area": [
         {
             "area": "SERVIÇO DE REDE",
@@ -50794,6 +50794,190 @@
             "nome": "COLABORADOR 371",
             "matricula": "",
             "participantes": 5
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "CENTRO SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 275",
+            "matricula": "",
+            "participantes": 22
+        },
+        {
+            "data": "2026-06-02",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "COLABORADOR 453",
+            "matricula": "",
+            "participantes": 18
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gilvan Sousa",
+            "matricula": "",
+            "participantes": 5
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Alex Silva",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Hoziel Araújo",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Macley Salazar",
+            "matricula": "",
+            "participantes": 6
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Francisco Cunha",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Francisco Cunha",
+            "matricula": "",
+            "participantes": 6
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Francisco Cunha",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "COLABORADOR 454",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Alex Silva",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "DEMAIS ÁREAS",
+            "nome": "Alex Silva",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-06-04",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "COLABORADOR 274",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-04",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Kesley Quirino",
+            "matricula": "",
+            "participantes": 14
+        },
+        {
+            "data": "2026-06-05",
+            "regional": "PARNAÍBA",
+            "area": "OBRAS AT/RD",
+            "nome": "Francisco Brito",
+            "matricula": "",
+            "participantes": 27
+        },
+        {
+            "data": "2026-06-05",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Francisco Cunha",
+            "matricula": "",
+            "participantes": 8
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "Henrique Carvalho 81",
+            "matricula": "",
+            "participantes": 43
+        },
+        {
+            "data": "2026-06-05",
+            "regional": "SUL",
+            "area": "GARANTIA DA RECEITA",
+            "nome": "Clemilson Silva",
+            "matricula": "",
+            "participantes": 41
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "PARNAÍBA",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 276",
+            "matricula": "",
+            "participantes": 29
+        },
+        {
+            "data": "2026-06-05",
+            "regional": "METROPOLITANA",
+            "area": "RELACIONAMENTO COM CLIENTE",
+            "nome": "COLABORADOR 400",
+            "matricula": "",
+            "participantes": 16
+        },
+        {
+            "data": "2026-06-07",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Livio Silva",
+            "matricula": "",
+            "participantes": 20
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 371",
+            "matricula": "",
+            "participantes": 41
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Juniel Lima 142",
+            "matricula": "",
+            "participantes": 9
         }
     ]
 }
