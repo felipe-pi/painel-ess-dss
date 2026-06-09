@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "08/06/2026 08:40",
+    "atualizado_em": "09/06/2026 14:46",
     "metas_area": [
         {
             "area": "SERVIÇO DE REDE",
@@ -50978,6 +50978,70 @@
             "nome": "Juniel Lima 142",
             "matricula": "",
             "participantes": 9
+        },
+        {
+            "data": "2026-06-05",
+            "regional": "SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "Joao Netto",
+            "matricula": "",
+            "participantes": 5
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "COLABORADOR 455",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Barros",
+            "matricula": "",
+            "participantes": 18
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Barros",
+            "matricula": "",
+            "participantes": 18
+        },
+        {
+            "data": "2026-06-01",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Marcos Sousa",
+            "matricula": "",
+            "participantes": 14
+        },
+        {
+            "data": "2026-06-05",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Marcos Sousa",
+            "matricula": "",
+            "participantes": 15
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Antonio Dias",
+            "matricula": "",
+            "participantes": 9
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Lima",
+            "matricula": "",
+            "participantes": 22
         }
     ]
 }
