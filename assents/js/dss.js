@@ -165,14 +165,24 @@ function atualizarTabelaArea(dados) {
 function atualizarTabelaColaborador(dados) {
   const resumo = {};
 
+  const normalizarNomePublico = (nome) => {
+    const partes = String(nome || '')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+
+    return partes.slice(0, 2).join(' ');
+  };
+
   dados.forEach((x) => {
-    const chave = x.matricula;
+    const nomePublico = normalizarNomePublico(x.nome);
+    const chave = x.matricula || `${nomePublico}|${x.area}`;
 
     if (!resumo[chave]) {
       resumo[chave] = {
         matricula: x.matricula,
 
-        nome: x.nome,
+        nome: nomePublico,
 
         area: x.area,
 
