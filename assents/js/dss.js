@@ -1,7 +1,7 @@
 let metasArea = [];
 let dss = [];
 
-fetch('./data/dss_publico.json')
+fetch(`./data/dss_publico.json?v=${Date.now()}`, { cache: 'no-store' })
   .then((response) => response.json())
   .then((json) => {
     metasArea = json.metas_area || [];
