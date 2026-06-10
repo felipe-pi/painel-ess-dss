@@ -206,12 +206,10 @@ function aplicarFiltros() {
     const inspecoesInspetor = inspecoesPorMatricula[i.matricula] || [];
     const realizado = inspecoesInspetor.length;
     const metaPeriodo = calcularMetaPeriodo(i, dataInicio, dataFim);
-    const realizadoAproveitado = calcularRealizadoAproveitado(
-      i,
-      dataInicio,
-      dataFim,
-      inspecoesInspetor,
-    );
+    const realizadoAproveitado =
+      i.classificacao === 'Ciclo+10'
+        ? calcularRealizadoAproveitado(i, dataInicio, dataFim, inspecoesInspetor)
+        : Math.min(realizado, metaPeriodo);
 
     const performanceReal =
       metaPeriodo > 0 ? (realizadoAproveitado / metaPeriodo) * 100 : 0;

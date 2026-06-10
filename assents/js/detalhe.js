@@ -47,12 +47,10 @@ fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
 
     const metaPeriodo = calcularMetaPeriodo(inspetor, inicio, fim);
     const realizado = inspecoesInspetor.length;
-    const realizadoAproveitado = calcularRealizadoAproveitado(
-      inspetor,
-      inicio,
-      fim,
-      inspecoesInspetor,
-    );
+    const realizadoAproveitado =
+      inspetor.classificacao === 'Ciclo+10'
+        ? calcularRealizadoAproveitado(inspetor, inicio, fim, inspecoesInspetor)
+        : Math.min(realizado, metaPeriodo);
 
     const performanceReal =
       metaPeriodo > 0 ? (realizadoAproveitado / metaPeriodo) * 100 : 0;
