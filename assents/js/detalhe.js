@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const matricula = params.get('id').trim().toUpperCase();
 const inicioParam = params.get('inicio');
 const fimParam = params.get('fim');
-fetch('./data/dados_publico.json')
+fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
   .then((response) => response.json())
   .then((data) => {
     const inspetor = data.inspetores.find(
@@ -14,8 +14,6 @@ fetch('./data/dados_publico.json')
       document.body.innerHTML = '<h1>Inspetor não encontrado</h1>';
       return;
     }
-
-    const hoje = new Date();
 
     let inicio;
     let fim;
@@ -48,17 +46,18 @@ fetch('./data/dados_publico.json')
     });
 
     const realizado = inspecoesInspetor.length;
+    const metaPeriodo = calcularMetaPeriodo(inspetor, inicio, fim);
 
     const performanceReal =
-      inspetor.meta_mes > 0 ? (realizado / inspetor.meta_mes) * 100 : 0;
+      metaPeriodo > 0 ? (realizado / metaPeriodo) * 100 : 0;
 
     const performance = Math.min(performanceReal, 100);
 
-    const gap = Math.max(inspetor.meta_mes - realizado, 0);
+    const gap = Math.max(metaPeriodo - realizado, 0);
 
     document.getElementById('matricula').innerHTML = inspetor.matricula;
     document.getElementById('nome_inspetor').innerHTML = inspetor.nome;
-    document.getElementById('meta_mes').innerHTML = inspetor.meta_mes;
+    document.getElementById('meta_mes').innerHTML = metaPeriodo;
     document.getElementById('realizado').innerHTML = realizado;
     document.getElementById('performance').innerHTML =
       performance.toFixed(1) + '%';
@@ -114,6 +113,63 @@ fetch('./data/dados_publico.json')
 
     document.getElementById('periodos').innerHTML = html;
   });
+
+function calcularDiasSobrepostos(inicioA, fimA, inicioB, fimB) {
+  const inicio = new Date(Math.max(inicioA.getTime(), inicioB.getTime()));
+  const fim = new Date(Math.min(fimA.getTime(), fimB.getTime()));
+
+  if (inicio > fim) return 0;
+
+  const msPorDia = 24 * 60 * 60 * 1000;
+
+  return Math.floor((fim - inicio) / msPorDia) + 1;
+}
+
+function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
+  const ano = dataInicio.getFullYear();
+  const mes = dataInicio.getMonth();
+  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+
+  const periodos = [
+    {
+      inicio: new Date(ano, mes, 1),
+      fim: new Date(ano, mes, 10),
+      meta: Number(inspetor.meta_01_10) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 11),
+      fim: new Date(ano, mes, 20),
+      meta: Number(inspetor.meta_11_20) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 21),
+      fim: new Date(ano, mes, ultimoDia),
+      meta: Number(inspetor.meta_21_31) || 0,
+    },
+  ];
+
+  const metaCalculada = periodos.reduce((total, periodo) => {
+    const diasPeriodo = calcularDiasSobrepostos(
+      periodo.inicio,
+      periodo.fim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    const diasSelecionados = calcularDiasSobrepostos(
+      dataInicio,
+      dataFim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
+
+    return total + (periodo.meta / diasPeriodo) * diasSelecionados;
+  }, 0);
+
+  return Math.ceil(metaCalculada);
+}
 
 const linkVoltar = document.querySelector('.voltar');
 

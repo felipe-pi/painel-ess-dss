@@ -6,7 +6,7 @@ const params = new URLSearchParams(window.location.search);
 const inicioUrl = params.get('inicio');
 const fimUrl = params.get('fim');
 
-fetch('./data/dados_publico.json')
+fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
   .then((response) => response.json())
   .then((json) => {
     inspetores = json.inspetores || [];
@@ -58,9 +58,69 @@ function preencherAreas() {
   });
 }
 
+function calcularDiasSobrepostos(inicioA, fimA, inicioB, fimB) {
+  const inicio = new Date(Math.max(inicioA.getTime(), inicioB.getTime()));
+  const fim = new Date(Math.min(fimA.getTime(), fimB.getTime()));
+
+  if (inicio > fim) return 0;
+
+  const msPorDia = 24 * 60 * 60 * 1000;
+
+  return Math.floor((fim - inicio) / msPorDia) + 1;
+}
+
+function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
+  const ano = dataInicio.getFullYear();
+  const mes = dataInicio.getMonth();
+  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+
+  const periodos = [
+    {
+      inicio: new Date(ano, mes, 1),
+      fim: new Date(ano, mes, 10),
+      meta: Number(inspetor.meta_01_10) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 11),
+      fim: new Date(ano, mes, 20),
+      meta: Number(inspetor.meta_11_20) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 21),
+      fim: new Date(ano, mes, ultimoDia),
+      meta: Number(inspetor.meta_21_31) || 0,
+    },
+  ];
+
+  const metaCalculada = periodos.reduce((total, periodo) => {
+    const diasPeriodo = calcularDiasSobrepostos(
+      periodo.inicio,
+      periodo.fim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    const diasSelecionados = calcularDiasSobrepostos(
+      dataInicio,
+      dataFim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
+
+    return total + (periodo.meta / diasPeriodo) * diasSelecionados;
+  }, 0);
+
+  return Math.ceil(metaCalculada);
+}
+
 function aplicarFiltros() {
   const busca = document.getElementById('busca').value.toLowerCase();
   const areaSelecionada = document.getElementById('areaFiltro').value;
+  const classificacaoSelecionada = document.getElementById(
+    'classificacaoFiltro',
+  ).value;
   const inicio = document.getElementById('dataInicio').value;
   const fim = document.getElementById('dataFim').value;
 
@@ -83,8 +143,10 @@ function aplicarFiltros() {
 
   let painel = inspetores.map((i) => {
     const realizado = realizados[i.matricula] || 0;
+    const metaPeriodo = calcularMetaPeriodo(i, dataInicio, dataFim);
 
-    const performanceReal = i.meta_mes > 0 ? (realizado / i.meta_mes) * 100 : 0;
+    const performanceReal =
+      metaPeriodo > 0 ? (realizado / metaPeriodo) * 100 : 0;
 
     const performance = Math.min(performanceReal, 100);
 
@@ -96,10 +158,11 @@ function aplicarFiltros() {
       status = 'amarelo';
     }
 
-    const gap = Math.max(i.meta_mes - realizado, 0);
+    const gap = Math.max(metaPeriodo - realizado, 0);
 
     return {
       ...i,
+      meta_periodo: metaPeriodo,
       realizado,
       performance: Number(performance.toFixed(1)),
       performance_real: Number(performanceReal.toFixed(1)),
@@ -110,6 +173,12 @@ function aplicarFiltros() {
 
   if (areaSelecionada) {
     painel = painel.filter((i) => i.area === areaSelecionada);
+  }
+
+  if (classificacaoSelecionada) {
+    painel = painel.filter(
+      (i) => i.classificacao === classificacaoSelecionada,
+    );
   }
 
   if (busca) {
@@ -148,7 +217,7 @@ function renderizarTabela(dados) {
         </td>
         <td>${item.nome}</td>
         <td>${item.area}</td>
-        <td>${item.meta_mes}</td>
+        <td>${item.meta_periodo}</td>
         <td>${item.realizado}</td>
         <td>${item.performance}%</td>
         <td>
@@ -164,7 +233,7 @@ function renderizarTabela(dados) {
 function atualizarCards(dados) {
   const colaboradores = dados.length;
 
-  const meta = dados.reduce((soma, item) => soma + item.meta_mes, 0);
+  const meta = dados.reduce((soma, item) => soma + item.meta_periodo, 0);
 
   const realizado = dados.reduce((soma, item) => soma + item.realizado, 0);
 
@@ -180,6 +249,9 @@ function atualizarCards(dados) {
 document.getElementById('busca').addEventListener('keyup', aplicarFiltros);
 document
   .getElementById('areaFiltro')
+  .addEventListener('change', aplicarFiltros);
+document
+  .getElementById('classificacaoFiltro')
   .addEventListener('change', aplicarFiltros);
 document.getElementById('btnAplicar').addEventListener('click', aplicarFiltros);
 // MENU MOBILE
