@@ -45,15 +45,21 @@ fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
       );
     });
 
-    const realizado = inspecoesInspetor.length;
     const metaPeriodo = calcularMetaPeriodo(inspetor, inicio, fim);
+    const realizado = inspecoesInspetor.length;
+    const realizadoAproveitado = calcularRealizadoAproveitado(
+      inspetor,
+      inicio,
+      fim,
+      inspecoesInspetor,
+    );
 
     const performanceReal =
-      metaPeriodo > 0 ? (realizado / metaPeriodo) * 100 : 0;
+      metaPeriodo > 0 ? (realizadoAproveitado / metaPeriodo) * 100 : 0;
 
     const performance = Math.min(performanceReal, 100);
 
-    const gap = Math.max(metaPeriodo - realizado, 0);
+    const gap = Math.max(metaPeriodo - realizadoAproveitado, 0);
 
     document.getElementById('matricula').innerHTML = inspetor.matricula;
     document.getElementById('nome_inspetor').innerHTML = inspetor.nome;
@@ -148,7 +154,7 @@ function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
     },
   ];
 
-  const metaCalculada = periodos.reduce((total, periodo) => {
+  return periodos.reduce((total, periodo) => {
     const diasPeriodo = calcularDiasSobrepostos(
       periodo.inicio,
       periodo.fim,
@@ -165,10 +171,67 @@ function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
 
     if (diasSelecionados === 0 || diasPeriodo === 0) return total;
 
-    return total + (periodo.meta / diasPeriodo) * diasSelecionados;
+    return total + Math.ceil((periodo.meta / diasPeriodo) * diasSelecionados);
   }, 0);
+}
 
-  return Math.ceil(metaCalculada);
+function calcularRealizadoAproveitado(
+  inspetor,
+  dataInicio,
+  dataFim,
+  inspecoesInspetor,
+) {
+  const ano = dataInicio.getFullYear();
+  const mes = dataInicio.getMonth();
+  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+
+  const periodos = [
+    {
+      inicio: new Date(ano, mes, 1),
+      fim: new Date(ano, mes, 10),
+      meta: Number(inspetor.meta_01_10) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 11),
+      fim: new Date(ano, mes, 20),
+      meta: Number(inspetor.meta_11_20) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 21),
+      fim: new Date(ano, mes, ultimoDia),
+      meta: Number(inspetor.meta_21_31) || 0,
+    },
+  ];
+
+  return periodos.reduce((total, periodo) => {
+    const diasPeriodo = calcularDiasSobrepostos(
+      periodo.inicio,
+      periodo.fim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    const diasSelecionados = calcularDiasSobrepostos(
+      dataInicio,
+      dataFim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
+
+    const metaSelecionada = Math.ceil(
+      (periodo.meta / diasPeriodo) * diasSelecionados,
+    );
+
+    const realizadoPeriodo = inspecoesInspetor.filter((inspecao) => {
+      const dataInspecao = new Date(inspecao.data + 'T00:00:00');
+
+      return dataInspecao >= periodo.inicio && dataInspecao <= periodo.fim;
+    }).length;
+
+    return total + Math.min(realizadoPeriodo, metaSelecionada);
+  }, 0);
 }
 
 const linkVoltar = document.querySelector('.voltar');

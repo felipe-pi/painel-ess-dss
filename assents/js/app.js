@@ -92,7 +92,7 @@ function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
     },
   ];
 
-  const metaCalculada = periodos.reduce((total, periodo) => {
+  return periodos.reduce((total, periodo) => {
     const diasPeriodo = calcularDiasSobrepostos(
       periodo.inicio,
       periodo.fim,
@@ -109,10 +109,67 @@ function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
 
     if (diasSelecionados === 0 || diasPeriodo === 0) return total;
 
-    return total + (periodo.meta / diasPeriodo) * diasSelecionados;
+    return total + Math.ceil((periodo.meta / diasPeriodo) * diasSelecionados);
   }, 0);
+}
 
-  return Math.ceil(metaCalculada);
+function calcularRealizadoAproveitado(
+  inspetor,
+  dataInicio,
+  dataFim,
+  inspecoesInspetor,
+) {
+  const ano = dataInicio.getFullYear();
+  const mes = dataInicio.getMonth();
+  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+
+  const periodos = [
+    {
+      inicio: new Date(ano, mes, 1),
+      fim: new Date(ano, mes, 10),
+      meta: Number(inspetor.meta_01_10) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 11),
+      fim: new Date(ano, mes, 20),
+      meta: Number(inspetor.meta_11_20) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 21),
+      fim: new Date(ano, mes, ultimoDia),
+      meta: Number(inspetor.meta_21_31) || 0,
+    },
+  ];
+
+  return periodos.reduce((total, periodo) => {
+    const diasPeriodo = calcularDiasSobrepostos(
+      periodo.inicio,
+      periodo.fim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    const diasSelecionados = calcularDiasSobrepostos(
+      dataInicio,
+      dataFim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
+
+    const metaSelecionada = Math.ceil(
+      (periodo.meta / diasPeriodo) * diasSelecionados,
+    );
+
+    const realizadoPeriodo = inspecoesInspetor.filter((inspecao) => {
+      const dataInspecao = new Date(inspecao.data + 'T00:00:00');
+
+      return dataInspecao >= periodo.inicio && dataInspecao <= periodo.fim;
+    }).length;
+
+    return total + Math.min(realizadoPeriodo, metaSelecionada);
+  }, 0);
 }
 
 function aplicarFiltros() {
@@ -135,18 +192,29 @@ function aplicarFiltros() {
     return dataInspecao >= dataInicio && dataInspecao <= dataFim;
   });
 
-  const realizados = {};
+  const inspecoesPorMatricula = {};
 
   inspecoesFiltradas.forEach((i) => {
-    realizados[i.matricula] = (realizados[i.matricula] || 0) + 1;
+    if (!inspecoesPorMatricula[i.matricula]) {
+      inspecoesPorMatricula[i.matricula] = [];
+    }
+
+    inspecoesPorMatricula[i.matricula].push(i);
   });
 
   let painel = inspetores.map((i) => {
-    const realizado = realizados[i.matricula] || 0;
+    const inspecoesInspetor = inspecoesPorMatricula[i.matricula] || [];
+    const realizado = inspecoesInspetor.length;
     const metaPeriodo = calcularMetaPeriodo(i, dataInicio, dataFim);
+    const realizadoAproveitado = calcularRealizadoAproveitado(
+      i,
+      dataInicio,
+      dataFim,
+      inspecoesInspetor,
+    );
 
     const performanceReal =
-      metaPeriodo > 0 ? (realizado / metaPeriodo) * 100 : 0;
+      metaPeriodo > 0 ? (realizadoAproveitado / metaPeriodo) * 100 : 0;
 
     const performance = Math.min(performanceReal, 100);
 
@@ -164,6 +232,7 @@ function aplicarFiltros() {
       ...i,
       meta_periodo: metaPeriodo,
       realizado,
+      realizado_aproveitado: realizadoAproveitado,
       performance: Number(performance.toFixed(1)),
       performance_real: Number(performanceReal.toFixed(1)),
       gap,
