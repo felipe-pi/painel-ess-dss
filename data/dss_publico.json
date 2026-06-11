@@ -1,29 +1,53 @@
 {
-    "atualizado_em": "10/06/2026 15:19",
+    "atualizado_em": "11/06/2026 08:52",
     "metas_area": [
         {
             "area": "SERVIÇO DE REDE",
-            "meta": 386
+            "meta": 386,
+            "meta_1_7": 96.5,
+            "meta_8_15": 96.5,
+            "meta_16_22": 96.5,
+            "meta_23_31": 96.5
         },
         {
             "area": "OBRAS AT/RD",
-            "meta": 218
+            "meta": 218,
+            "meta_1_7": 54.5,
+            "meta_8_15": 54.5,
+            "meta_16_22": 54.5,
+            "meta_23_31": 54.5
         },
         {
             "area": "RECUPERAÇÃO DE ENERGIA",
-            "meta": 31
+            "meta": 31,
+            "meta_1_7": 7.75,
+            "meta_8_15": 7.75,
+            "meta_16_22": 7.75,
+            "meta_23_31": 7.75
         },
         {
             "area": "GARANTIA DA RECEITA",
-            "meta": 95
+            "meta": 95,
+            "meta_1_7": 23.75,
+            "meta_8_15": 23.75,
+            "meta_16_22": 23.75,
+            "meta_23_31": 23.75
         },
         {
             "area": "MANUTENÇÃO AT/RD",
-            "meta": 122
+            "meta": 122,
+            "meta_1_7": 30.5,
+            "meta_8_15": 30.5,
+            "meta_16_22": 30.5,
+            "meta_23_31": 30.5
         },
         {
             "area": "RELACIONAMENTO COM CLIENTE",
-            "meta": 34
+            "meta": 34,
+            "meta_1_7": 8.5,
+            "meta_8_15": 8.5,
+            "meta_16_22": 8.5,
+            "meta_23_31": 8.5
         }
     ],
     "dss": [

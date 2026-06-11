@@ -45,6 +45,80 @@ function preencherAreas() {
   });
 }
 
+function formatarNumero(valor) {
+  return Number.isInteger(valor) ? valor : valor.toFixed(1);
+}
+
+function calcularDiasSobrepostos(inicioA, fimA, inicioB, fimB) {
+  const inicio = new Date(Math.max(inicioA.getTime(), inicioB.getTime()));
+  const fim = new Date(Math.min(fimA.getTime(), fimB.getTime()));
+
+  if (inicio > fim) return 0;
+
+  const msPorDia = 24 * 60 * 60 * 1000;
+
+  return Math.floor((fim - inicio) / msPorDia) + 1;
+}
+
+function calcularMetaDssPeriodo(metaArea, dataInicio, dataFim) {
+  const ano = dataInicio.getFullYear();
+  const mes = dataInicio.getMonth();
+  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+
+  const periodos = [
+    {
+      inicio: new Date(ano, mes, 1),
+      fim: new Date(ano, mes, 7),
+      meta: Number(metaArea.meta_1_7) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 8),
+      fim: new Date(ano, mes, 15),
+      meta: Number(metaArea.meta_8_15) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 16),
+      fim: new Date(ano, mes, 22),
+      meta: Number(metaArea.meta_16_22) || 0,
+    },
+    {
+      inicio: new Date(ano, mes, 23),
+      fim: new Date(ano, mes, ultimoDia),
+      meta: Number(metaArea.meta_23_31) || 0,
+    },
+  ];
+
+  const metaPeriodo = periodos.reduce((total, periodo) => {
+    const diasPeriodo = calcularDiasSobrepostos(
+      periodo.inicio,
+      periodo.fim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    const diasSelecionados = calcularDiasSobrepostos(
+      dataInicio,
+      dataFim,
+      periodo.inicio,
+      periodo.fim,
+    );
+
+    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
+
+    return total + (periodo.meta / diasPeriodo) * diasSelecionados;
+  }, 0);
+
+  return Math.ceil(metaPeriodo);
+}
+
+function obterMetasVisiveis() {
+  const areaSelecionada = document.getElementById('areaFiltroDss').value;
+
+  if (!areaSelecionada) return metasArea;
+
+  return metasArea.filter((x) => x.area === areaSelecionada);
+}
+
 function aplicarFiltrosDss() {
   const busca = document.getElementById('buscaDss').value.toLowerCase();
 
@@ -90,9 +164,18 @@ function aplicarFiltrosDss() {
 }
 
 function atualizarResumo(dados) {
-  const areas = metasArea.length;
+  const inicio = document.getElementById('dataInicioDss').value;
+  const fim = document.getElementById('dataFimDss').value;
+  const dataInicio = new Date(inicio + 'T00:00:00');
+  const dataFim = new Date(fim + 'T23:59:59');
+  const metasVisiveis = obterMetasVisiveis();
 
-  const meta = metasArea.reduce((soma, item) => soma + item.meta, 0);
+  const areas = metasVisiveis.length;
+
+  const meta = metasVisiveis.reduce(
+    (soma, item) => soma + calcularMetaDssPeriodo(item, dataInicio, dataFim),
+    0,
+  );
 
   // Realizado = soma dos participantes
   const realizado = dados.reduce(
@@ -106,7 +189,7 @@ function atualizarResumo(dados) {
   const performance = meta > 0 ? Math.min((realizado / meta) * 100, 100) : 0;
 
   document.getElementById('areasDss').innerHTML = areas;
-  document.getElementById('metaDss').innerHTML = meta;
+  document.getElementById('metaDss').innerHTML = formatarNumero(meta);
   document.getElementById('realizadoDss').innerHTML = realizado;
   document.getElementById('performanceDss').innerHTML =
     performance.toFixed(1) + '%';
@@ -114,10 +197,17 @@ function atualizarResumo(dados) {
 }
 
 function atualizarTabelaArea(dados) {
+  const inicio = document.getElementById('dataInicioDss').value;
+  const fim = document.getElementById('dataFimDss').value;
+  const dataInicio = new Date(inicio + 'T00:00:00');
+  const dataFim = new Date(fim + 'T23:59:59');
+  const metasVisiveis = obterMetasVisiveis();
+
   let html = '';
 
-  metasArea.forEach((metaArea) => {
+  metasVisiveis.forEach((metaArea) => {
     const registros = dados.filter((x) => x.area === metaArea.area);
+    const metaPeriodo = calcularMetaDssPeriodo(metaArea, dataInicio, dataFim);
 
     // quantidade de DSS
     const quantidade = registros.length;
@@ -128,10 +218,10 @@ function atualizarTabelaArea(dados) {
       0,
     );
 
-    const gap = metaArea.meta - realizado;
+    const gap = Math.max(metaPeriodo - realizado, 0);
 
     const performance =
-      metaArea.meta > 0 ? Math.min((realizado / metaArea.meta) * 100, 100) : 0;
+      metaPeriodo > 0 ? Math.min((realizado / metaPeriodo) * 100, 100) : 0;
 
     let status = 'vermelho';
 
@@ -145,9 +235,9 @@ function atualizarTabelaArea(dados) {
         <tr>
           <td>${metaArea.area}</td>
           <td>${quantidade}</td>
-          <td>${metaArea.meta}</td>
+          <td>${formatarNumero(metaPeriodo)}</td>
           <td>${realizado}</td>
-          <td>${gap}</td>
+          <td>${formatarNumero(gap)}</td>
           <td>
             ${performance.toFixed(1)}%
           </td>
