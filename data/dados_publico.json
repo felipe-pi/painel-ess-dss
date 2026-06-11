@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "11/06/2026 08:52",
+    "atualizado_em": "11/06/2026 09:01",
     "inspetores": [
         {
             "matricula": "INSPETOR_01",
@@ -145,7 +145,7 @@
             "matricula": "INSPETOR_15",
             "nome": "Elismar Ribeiro",
             "area": "MANUTENÇÃO",
-            "classificacao": "Inspeção",
+            "classificacao": "Ciclo+10",
             "meta_mes": 4,
             "meta_01_10": 2,
             "meta_11_20": 1,
@@ -225,11 +225,11 @@
             "matricula": "INSPETOR_23",
             "nome": "Francisco Mateus",
             "area": "OBRAS",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_24",
@@ -245,7 +245,7 @@
             "matricula": "INSPETOR_25",
             "nome": "Lucas Oliveira",
             "area": "STC",
-            "classificacao": "Inspeção",
+            "classificacao": "Ciclo+10",
             "meta_mes": 3,
             "meta_01_10": 1,
             "meta_11_20": 1,
@@ -275,7 +275,7 @@
             "matricula": "INSPETOR_28",
             "nome": "Victor Jardel",
             "area": "MANUTENÇÃO",
-            "classificacao": "Inspeção",
+            "classificacao": "Ciclo+10",
             "meta_mes": 8,
             "meta_01_10": 3,
             "meta_11_20": 3,
@@ -385,11 +385,11 @@
             "matricula": "INSPETOR_39",
             "nome": "Paulo Henrique",
             "area": "OBRAS",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_40",
