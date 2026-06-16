@@ -837,6 +837,59 @@ a:hover {
   text-align: center;
 }
 
+.pagina-detalhe {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.detalhe-content {
+  padding: 34px 28px;
+}
+
+.pagina-detalhe .container {
+  max-width: 1120px;
+}
+
+.voltar {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  padding: 10px 14px;
+}
+
+.voltar:hover {
+  background: var(--surface-muted);
+  color: var(--primary-hover);
+}
+
+.detalhe-header {
+  margin-bottom: 22px;
+}
+
+.detalhe-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.detalhe-header h1 {
+  margin-bottom: 6px;
+}
+
+.detalhe-header h2 {
+  color: var(--muted);
+  font-size: 20px;
+  font-weight: 600;
+}
+
 @media (max-width: 1000px) {
   .sidebar {
     width: 88px;

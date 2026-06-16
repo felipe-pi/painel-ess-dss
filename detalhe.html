@@ -2,65 +2,61 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width,
-          initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Detalhes Inspetor</title>
 
-    <link rel="stylesheet" href="assents/css/style.css" />
+    <link rel="stylesheet" href="assents/css/style.css?v=20260616-detalhe" />
   </head>
 
-  <body>
-    <div class="container">
-      <a href="index.html" class="voltar"> ← Voltar </a>
+  <body class="pagina-detalhe">
+    <main class="detalhe-content">
+      <div class="container">
+        <a href="index.html" class="voltar">← Voltar</a>
 
-      <h1 id="matricula">Carregando...</h1>
-
-      <h2
-        id="nome_inspetor"
-        style="text-align: center; margin-bottom: 30px"
-      ></h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Meta Período</h3>
-          <p id="meta_mes">0</p>
+        <div class="detalhe-header">
+          <p class="detalhe-label">Detalhes do inspetor</p>
+          <h1 id="matricula">Carregando...</h1>
+          <h2 id="nome_inspetor"></h2>
         </div>
 
-        <div class="card">
-          <h3>Realizado</h3>
-          <p id="realizado">0</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Meta Período</h3>
+            <p id="meta_mes">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Realizado</h3>
+            <p id="realizado">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Performance</h3>
+            <p id="performance">0%</p>
+          </div>
+
+          <div class="card">
+            <h3>Gap</h3>
+            <p id="gap">0</p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Performance</h3>
-          <p id="performance">0%</p>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Período</th>
+              <th>Meta</th>
+              <th>Realizado</th>
+              <th>Aproveitado</th>
+            </tr>
+          </thead>
 
-        <div class="card">
-          <h3>Gap</h3>
-          <p id="gap">0</p>
-        </div>
+          <tbody id="periodos"></tbody>
+        </table>
       </div>
+    </main>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Período</th>
-            <th>Meta</th>
-            <th>Realizado</th>
-            <th>Aproveitado</th>
-          </tr>
-        </thead>
-
-        <tbody id="periodos"></tbody>
-      </table>
-    </div>
-
-    <script src="assents/js/detalhe.js?v=20260610-ciclo10"></script>
+    <script src="assents/js/detalhe.js?v=20260616-detalhe"></script>
   </body>
 </html>
