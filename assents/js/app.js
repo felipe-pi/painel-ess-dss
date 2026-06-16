@@ -172,6 +172,16 @@ function calcularRealizadoAproveitado(
   }, 0);
 }
 
+function obterStatusTexto(status) {
+  const textos = {
+    verde: 'No prazo',
+    amarelo: 'Atenção',
+    vermelho: 'Abaixo',
+  };
+
+  return textos[status] || 'Abaixo';
+}
+
 function aplicarFiltros() {
   const busca = document.getElementById('busca').value.toLowerCase();
   const areaSelecionada = document.getElementById('areaFiltro').value;
@@ -274,6 +284,17 @@ function renderizarTabela(dados) {
   const dataFim = document.getElementById('dataFim').value;
   let html = '';
 
+  if (dados.length === 0) {
+    document.getElementById('tabelaInspetores').innerHTML = `
+      <tr>
+        <td colspan="8" class="estado-vazio">
+          Nenhum inspetor encontrado para os filtros selecionados.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
   dados.forEach((item) => {
     html += `
       <tr>
@@ -284,11 +305,15 @@ function renderizarTabela(dados) {
         </td>
         <td>${item.nome}</td>
         <td>${item.area}</td>
+        <td><span class="tag">${item.classificacao || '-'}</span></td>
         <td>${item.meta_periodo}</td>
         <td>${item.realizado}</td>
         <td>${item.performance}%</td>
         <td>
-          <span class="status ${item.status}"></span>
+          <span class="status-badge ${item.status}">
+            <span class="status ${item.status}"></span>
+            ${obterStatusTexto(item.status)}
+          </span>
         </td>
       </tr>
     `;
@@ -303,8 +328,13 @@ function atualizarCards(dados) {
   const meta = dados.reduce((soma, item) => soma + item.meta_periodo, 0);
 
   const realizado = dados.reduce((soma, item) => soma + item.realizado, 0);
+  const realizadoAproveitado = dados.reduce(
+    (soma, item) => soma + item.realizado_aproveitado,
+    0,
+  );
 
-  const performance = meta > 0 ? Math.min((realizado / meta) * 100, 100) : 0;
+  const performance =
+    meta > 0 ? Math.min((realizadoAproveitado / meta) * 100, 100) : 0;
 
   document.getElementById('colaboradores').innerHTML = colaboradores;
   document.getElementById('metaGeral').innerHTML = meta;
@@ -321,6 +351,13 @@ document
   .getElementById('classificacaoFiltro')
   .addEventListener('change', aplicarFiltros);
 document.getElementById('btnAplicar').addEventListener('click', aplicarFiltros);
+document.getElementById('btnLimpar').addEventListener('click', () => {
+  document.getElementById('busca').value = '';
+  document.getElementById('areaFiltro').value = '';
+  document.getElementById('classificacaoFiltro').value = '';
+  definirMesAtual();
+  aplicarFiltros();
+});
 // MENU MOBILE
 const menuBtn = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');

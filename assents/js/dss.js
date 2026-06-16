@@ -119,6 +119,16 @@ function obterMetasVisiveis() {
   return metasArea.filter((x) => x.area === areaSelecionada);
 }
 
+function obterStatusTexto(status) {
+  const textos = {
+    verde: 'No prazo',
+    amarelo: 'Atenção',
+    vermelho: 'Abaixo',
+  };
+
+  return textos[status] || 'Abaixo';
+}
+
 function aplicarFiltrosDss() {
   const busca = document.getElementById('buscaDss').value.toLowerCase();
 
@@ -205,6 +215,17 @@ function atualizarTabelaArea(dados) {
 
   let html = '';
 
+  if (metasVisiveis.length === 0) {
+    document.getElementById('tabelaAreasDss').innerHTML = `
+      <tr>
+        <td colspan="7" class="estado-vazio">
+          Nenhuma área encontrada para os filtros selecionados.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
   metasVisiveis.forEach((metaArea) => {
     const registros = dados.filter((x) => x.area === metaArea.area);
     const metaPeriodo = calcularMetaDssPeriodo(metaArea, dataInicio, dataFim);
@@ -242,7 +263,9 @@ function atualizarTabelaArea(dados) {
             ${performance.toFixed(1)}%
           </td>
           <td>
-            <span class="status ${status}">
+            <span class="status-badge ${status}">
+              <span class="status ${status}"></span>
+              ${obterStatusTexto(status)}
             </span>
           </td>
         </tr>
@@ -293,6 +316,17 @@ function atualizarTabelaColaborador(dados) {
 
   let html = '';
 
+  if (lista.length === 0) {
+    document.getElementById('tabelaColaboradoresDss').innerHTML = `
+      <tr>
+        <td colspan="5" class="estado-vazio">
+          Nenhum colaborador encontrado para os filtros selecionados.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
   lista.forEach((x) => {
     html += `
         <tr>
@@ -311,6 +345,12 @@ function atualizarTabelaColaborador(dados) {
 document
   .getElementById('btnAplicarDss')
   .addEventListener('click', aplicarFiltrosDss);
+document.getElementById('btnLimparDss').addEventListener('click', () => {
+  document.getElementById('buscaDss').value = '';
+  document.getElementById('areaFiltroDss').value = '';
+  definirMesAtual();
+  aplicarFiltrosDss();
+});
 
 document
   .getElementById('areaFiltroDss')
