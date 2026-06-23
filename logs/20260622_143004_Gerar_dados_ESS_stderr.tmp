@@ -1,0 +1,4 @@
+C:\Users\u1107516\AppData\Local\Programs\Python\Python311\Lib\site-packages\openpyxl\worksheet\_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed
+  warn(msg)
+Warning: Dependency 'keyring' is not installed, cannot cache id token. You might experience multiple authentication pop ups while using ExternalBrowser/OAuth/MFA Authenticator. To avoid this please install keyring module using the following command:
+ pip install snowflake-connector-python[secure-local-storage]

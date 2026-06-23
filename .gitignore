@@ -26,6 +26,7 @@ backup/
 # dados reais
 data/dados.json
 data/dss.json
+data/altas_horas.json
 
 # scripts locais
 scripts/

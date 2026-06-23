@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Painel ESS</title>
+    <title>Painel Altas Horas</title>
 
     <link rel="stylesheet" href="./assents/css/style.css?v=20260623-altas1" />
 
@@ -19,13 +19,13 @@
       <button id="menuToggle" class="menu-btn">&#9776;</button>
 
       <div class="logo">
-        <img src="assets/img/logo.png" alt="ESS" />
+        <img src="assents/img/logo.png" alt="ESS" />
       </div>
     </div>
 
     <aside class="sidebar" id="sidebar">
       <nav>
-        <a href="index.html" class="menu-item active">
+        <a href="index.html" class="menu-item">
           <i class="fa-solid fa-chart-column"></i>
           Dashboard
         </a>
@@ -35,7 +35,7 @@
           DSS
         </a>
 
-        <a href="altas_horas.html" class="menu-item">
+        <a href="altas_horas.html" class="menu-item active">
           <i class="fa-solid fa-clock"></i>
           Altas Horas
         </a>
@@ -49,60 +49,51 @@
 
     <main class="main-content">
       <div class="container">
-        <h1>&#128202; Painel ESS</h1>
+        <h1>&#9200; Painel Altas Horas</h1>
 
         <p class="atualizado">
           Atualizado em:
-          <span id="atualizado"></span>
+          <span id="atualizadoAltasHoras"></span>
         </p>
 
         <div class="filtros">
           <input
             type="text"
-            id="busca"
+            id="buscaAltasHoras"
             placeholder="Digite matricula ou nome"
           />
 
-          <select id="areaFiltro">
+          <select id="areaFiltroAltasHoras">
             <option value="">Todas as areas</option>
-            <option value="STC">STC</option>
-            <option value="MANUTENCAO">Manutencao</option>
-            <option value="RECUPERACAO">Recuperacao</option>
-          </select>
-
-          <select id="classificacaoFiltro">
-            <option value="">Todos</option>
-            <option value="Ciclo+10">Ciclo+10</option>
-            <option value="Inspeção">Inspecao</option>
           </select>
 
           <div class="filtros-data">
-            <input type="date" id="dataInicio" />
-            <input type="date" id="dataFim" />
-            <button id="btnAplicar">Atualizar</button>
-            <button id="btnLimpar" type="button">Limpar</button>
+            <input type="date" id="dataInicioAltasHoras" />
+            <input type="date" id="dataFimAltasHoras" />
+            <button id="btnAplicarAltasHoras">Atualizar</button>
+            <button id="btnLimparAltasHoras" type="button">Limpar</button>
           </div>
         </div>
 
         <div class="cards">
           <div class="card">
             <h3>Colaboradores</h3>
-            <p id="colaboradores">0</p>
+            <p id="colaboradoresAltasHoras">0</p>
           </div>
 
           <div class="card">
-            <h3>Meta Geral</h3>
-            <p id="metaGeral">0</p>
+            <h3>Meta Altas Horas</h3>
+            <p id="metaAltasHoras">0</p>
           </div>
 
           <div class="card">
             <h3>Realizado</h3>
-            <p id="realizadoGeral">0</p>
+            <p id="realizadoAltasHoras">0</p>
           </div>
 
           <div class="card">
             <h3>Performance</h3>
-            <p id="performanceGeral">0%</p>
+            <p id="performanceAltasHoras">0%</p>
           </div>
         </div>
 
@@ -112,7 +103,6 @@
               <th>Matricula</th>
               <th>Inspetor</th>
               <th>Area</th>
-              <th>Classificacao</th>
               <th>Meta</th>
               <th>Realizado</th>
               <th>Performance</th>
@@ -120,11 +110,11 @@
             </tr>
           </thead>
 
-          <tbody id="tabelaInspetores"></tbody>
+          <tbody id="tabelaAltasHoras"></tbody>
         </table>
       </div>
     </main>
 
-    <script src="./assents/js/app.js?v=20260623-altas1"></script>
+    <script src="./assents/js/altas_horas.js?v=20260623-altas1"></script>
   </body>
 </html>
