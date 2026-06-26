@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "25/06/2026 18:00",
+    "atualizado_em": "26/06/2026 08:30",
     "inspetores": [
         {
             "matricula": "INSPETOR_AH_01",
@@ -64,90 +64,6 @@
         {
             "matricula": "INSPETOR_AH_05",
             "data": "2026-06-10"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2024-10-02"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2024-10-28"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2024-10-29"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2024-11-27"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2024-12-01"
-        },
-        {
-            "matricula": "INSPETOR_AH_02",
-            "data": "2024-12-26"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2024-12-26"
-        },
-        {
-            "matricula": "INSPETOR_AH_02",
-            "data": "2025-01-30"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2025-01-30"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2025-01-29"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2025-02-26"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2025-02-27"
-        },
-        {
-            "matricula": "INSPETOR_AH_02",
-            "data": "2025-02-26"
-        },
-        {
-            "matricula": "INSPETOR_AH_02",
-            "data": "2025-03-27"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2025-03-31"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2025-03-27"
-        },
-        {
-            "matricula": "INSPETOR_AH_02",
-            "data": "2025-04-15"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2025-04-30"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2025-04-28"
-        },
-        {
-            "matricula": "INSPETOR_AH_03",
-            "data": "2025-05-16"
-        },
-        {
-            "matricula": "INSPETOR_AH_04",
-            "data": "2025-05-15"
         },
         {
             "matricula": "INSPETOR_AH_02",
@@ -256,6 +172,90 @@
         {
             "matricula": "INSPETOR_AH_01",
             "data": "2026-04-10"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2024-10-02"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2024-10-28"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2024-10-29"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2024-11-27"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2024-12-01"
+        },
+        {
+            "matricula": "INSPETOR_AH_02",
+            "data": "2024-12-26"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2024-12-26"
+        },
+        {
+            "matricula": "INSPETOR_AH_02",
+            "data": "2025-01-30"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2025-01-30"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2025-01-29"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2025-02-26"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2025-02-27"
+        },
+        {
+            "matricula": "INSPETOR_AH_02",
+            "data": "2025-02-26"
+        },
+        {
+            "matricula": "INSPETOR_AH_02",
+            "data": "2025-03-27"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2025-03-31"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2025-03-27"
+        },
+        {
+            "matricula": "INSPETOR_AH_02",
+            "data": "2025-04-15"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2025-04-30"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2025-04-28"
+        },
+        {
+            "matricula": "INSPETOR_AH_03",
+            "data": "2025-05-16"
+        },
+        {
+            "matricula": "INSPETOR_AH_04",
+            "data": "2025-05-15"
         },
         {
             "matricula": "INSPETOR_AH_02",
