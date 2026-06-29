@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "29/06/2026 08:34",
+    "atualizado_em": "29/06/2026 19:02",
     "metas_area": [
         {
             "area": "SERVIÇO DE REDE",
@@ -51914,6 +51914,358 @@
             "nome": "Antonio Roberto",
             "matricula": "",
             "participantes": 6
+        },
+        {
+            "data": "2026-06-19",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 21
+        },
+        {
+            "data": "2026-06-20",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 21
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 8
+        },
+        {
+            "data": "2026-06-17",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 11
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 6
+        },
+        {
+            "data": "2026-06-15",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 27
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Antonio Roberto",
+            "matricula": "",
+            "participantes": 7
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Marcos Antonio",
+            "matricula": "",
+            "participantes": 14
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 21
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 371",
+            "matricula": "",
+            "participantes": 31
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "CENTRO SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "José Hailto",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-23",
+            "regional": "SUL",
+            "area": "DEMAIS ÁREAS",
+            "nome": "COLABORADOR 459",
+            "matricula": "",
+            "participantes": 7
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Livio Rodrigues",
+            "matricula": "",
+            "participantes": 18
+        },
+        {
+            "data": "2026-06-23",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Misael Solon",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-23",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gabriel Morais",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-06-24",
+            "regional": "SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "Raimundo Afonso",
+            "matricula": "",
+            "participantes": 5
+        },
+        {
+            "data": "2026-06-24",
+            "regional": "SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 371",
+            "matricula": "",
+            "participantes": 6
+        },
+        {
+            "data": "2026-06-24",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 21
+        },
+        {
+            "data": "2026-06-23",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 21
+        },
+        {
+            "data": "2026-06-18",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Misael Solon",
+            "matricula": "",
+            "participantes": 23
+        },
+        {
+            "data": "2026-06-24",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gabriel Morais",
+            "matricula": "",
+            "participantes": 7
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "COLABORADOR 315",
+            "matricula": "",
+            "participantes": 48
+        },
+        {
+            "data": "2026-06-23",
+            "regional": "CENTRO SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 275",
+            "matricula": "",
+            "participantes": 5
+        },
+        {
+            "data": "2026-06-25",
+            "regional": "SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "José Hailto 173",
+            "matricula": "",
+            "participantes": 6
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-22",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-15",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-11",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-11",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-08",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-24",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Hélio Dos",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-06-03",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-02",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-02",
+            "regional": "PARNAÍBA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Carlos José",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-25",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gabriel Morais",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-06-24",
+            "regional": "CENTRO SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "José Hailto",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-25",
+            "regional": "CENTRO SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "José Hailto",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-06-25",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gabriel Morais",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-06-26",
+            "regional": "PARNAÍBA",
+            "area": "OBRAS AT/RD",
+            "nome": "COLABORADOR 460",
+            "matricula": "",
+            "participantes": 38
+        },
+        {
+            "data": "2026-06-26",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "COLABORADOR 301",
+            "matricula": "",
+            "participantes": 9
+        },
+        {
+            "data": "2026-06-26",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 21
+        },
+        {
+            "data": "2026-06-26",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gilvan Mendes",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-06-25",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Livio Rodrigues",
+            "matricula": "",
+            "participantes": 18
         }
     ]
 }
