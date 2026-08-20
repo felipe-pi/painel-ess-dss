@@ -56,6 +56,48 @@ function preencherAreas() {
     option.textContent = area;
     select.appendChild(option);
   });
+
+  preencherSubareas();
+}
+
+function areaEhManutencao(area) {
+  return String(area || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toUpperCase() === 'MANUTENCAO';
+}
+
+function preencherSubareas() {
+  const select = document.getElementById('subareaFiltro');
+  const subareas = [
+    ...new Set(
+      inspetores
+        .filter((i) => areaEhManutencao(i.area))
+        .map((i) => i.subarea)
+        .filter(Boolean),
+    ),
+  ].sort();
+
+  select.innerHTML = `<option value="">Todas as subdivisões</option>`;
+
+  subareas.forEach((subarea) => {
+    const option = document.createElement('option');
+    option.value = subarea;
+    option.textContent = subarea;
+    select.appendChild(option);
+  });
+}
+
+function atualizarVisibilidadeSubarea() {
+  const areaSelecionada = document.getElementById('areaFiltro').value;
+  const subareaFiltro = document.getElementById('subareaFiltro');
+  const deveMostrar = areaEhManutencao(areaSelecionada);
+
+  subareaFiltro.classList.toggle('hidden', !deveMostrar);
+
+  if (!deveMostrar) {
+    subareaFiltro.value = '';
+  }
 }
 
 function calcularDiasSobrepostos(inicioA, fimA, inicioB, fimB) {
@@ -185,6 +227,7 @@ function obterStatusTexto(status) {
 function aplicarFiltros() {
   const busca = document.getElementById('busca').value.toLowerCase();
   const areaSelecionada = document.getElementById('areaFiltro').value;
+  const subareaSelecionada = document.getElementById('subareaFiltro').value;
   const classificacaoSelecionada = document.getElementById(
     'classificacaoFiltro',
   ).value;
@@ -250,6 +293,10 @@ function aplicarFiltros() {
 
   if (areaSelecionada) {
     painel = painel.filter((i) => i.area === areaSelecionada);
+  }
+
+  if (subareaSelecionada) {
+    painel = painel.filter((i) => i.subarea === subareaSelecionada);
   }
 
   if (classificacaoSelecionada) {
@@ -346,6 +393,12 @@ function atualizarCards(dados) {
 document.getElementById('busca').addEventListener('keyup', aplicarFiltros);
 document
   .getElementById('areaFiltro')
+  .addEventListener('change', () => {
+    atualizarVisibilidadeSubarea();
+    aplicarFiltros();
+  });
+document
+  .getElementById('subareaFiltro')
   .addEventListener('change', aplicarFiltros);
 document
   .getElementById('classificacaoFiltro')
@@ -354,7 +407,9 @@ document.getElementById('btnAplicar').addEventListener('click', aplicarFiltros);
 document.getElementById('btnLimpar').addEventListener('click', () => {
   document.getElementById('busca').value = '';
   document.getElementById('areaFiltro').value = '';
+  document.getElementById('subareaFiltro').value = '';
   document.getElementById('classificacaoFiltro').value = '';
+  atualizarVisibilidadeSubarea();
   definirMesAtual();
   aplicarFiltros();
 });

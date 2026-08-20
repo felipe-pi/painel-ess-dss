@@ -830,6 +830,10 @@ a:hover {
   padding: 5px 10px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .estado-vazio {
   color: var(--muted);
   font-weight: 700;

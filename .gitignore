@@ -31,6 +31,9 @@ data/altas_horas.json
 # scripts locais
 scripts/
 
+# dados do temp
+logs/*.tmp
+
 # ======================
 # SCRIPTS CORPORATIVOS
 # ======================
