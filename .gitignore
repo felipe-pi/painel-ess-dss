@@ -27,6 +27,7 @@ backup/
 data/dados.json
 data/dss.json
 data/altas_horas.json
+data/*.tmp
 
 # scripts locais
 scripts/
