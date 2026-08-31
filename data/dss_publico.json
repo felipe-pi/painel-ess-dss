@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "31/08/2026 09:51",
+    "atualizado_em": "31/08/2026 10:00",
     "metas_area": [
         {
             "area": "SERVIÇO DE REDE",
@@ -54522,6 +54522,230 @@
             "nome": "Fabricio Diego",
             "matricula": "",
             "participantes": 10
+        },
+        {
+            "data": "2026-08-21",
+            "regional": "PARNAÍBA",
+            "area": "GARANTIA DA RECEITA",
+            "nome": "Ismael Dos",
+            "matricula": "",
+            "participantes": 39
+        },
+        {
+            "data": "2026-08-24",
+            "regional": "SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "COLABORADOR 439",
+            "matricula": "",
+            "participantes": 12
+        },
+        {
+            "data": "2026-08-24",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Rogério Aquino",
+            "matricula": "",
+            "participantes": 5
+        },
+        {
+            "data": "2026-08-04",
+            "regional": "CENTRO SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Evandro Edimar 22",
+            "matricula": "",
+            "participantes": 18
+        },
+        {
+            "data": "2026-08-10",
+            "regional": "CENTRO SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Evandro Edimar 22",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-08-12",
+            "regional": "CENTRO SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Evandro Edimar 22",
+            "matricula": "",
+            "participantes": 3
+        },
+        {
+            "data": "2026-08-10",
+            "regional": "CENTRO SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Evandro Edimar 22",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-08-24",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Alex Sandro",
+            "matricula": "",
+            "participantes": 2
+        },
+        {
+            "data": "2026-08-25",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Gilvan Mendes",
+            "matricula": "",
+            "participantes": 8
+        },
+        {
+            "data": "2026-08-25",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 26
+        },
+        {
+            "data": "2026-08-25",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 26
+        },
+        {
+            "data": "2026-08-24",
+            "regional": "METROPOLITANA",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Fabricio Diego",
+            "matricula": "",
+            "participantes": 20
+        },
+        {
+            "data": "2026-08-25",
+            "regional": "SUL",
+            "area": "OBRAS AT/RD",
+            "nome": "Henrique Mesquita 81",
+            "matricula": "",
+            "participantes": 36
+        },
+        {
+            "data": "2026-08-24",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 27
+        },
+        {
+            "data": "2026-08-17",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 31
+        },
+        {
+            "data": "2026-08-19",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 8
+        },
+        {
+            "data": "2026-08-26",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Rogério Aquino",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-08-26",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Alex Sandro",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-08-26",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Alex Sandro",
+            "matricula": "",
+            "participantes": 4
+        },
+        {
+            "data": "2026-08-27",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Dean Moura",
+            "matricula": "",
+            "participantes": 5
+        },
+        {
+            "data": "2026-08-26",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "COLABORADOR 352",
+            "matricula": "",
+            "participantes": 45
+        },
+        {
+            "data": "2026-08-24",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Kesley Bruno",
+            "matricula": "",
+            "participantes": 15
+        },
+        {
+            "data": "2026-08-27",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Kesley Bruno",
+            "matricula": "",
+            "participantes": 15
+        },
+        {
+            "data": "2026-08-27",
+            "regional": "SUL",
+            "area": "RECUPERAÇÃO DE ENERGIA",
+            "nome": "Kesley Bruno",
+            "matricula": "",
+            "participantes": 19
+        },
+        {
+            "data": "2026-08-28",
+            "regional": "METROPOLITANA",
+            "area": "RELACIONAMENTO COM CLIENTE",
+            "nome": "COLABORADOR 400",
+            "matricula": "",
+            "participantes": 39
+        },
+        {
+            "data": "2026-08-31",
+            "regional": "SUL",
+            "area": "MANUTENÇÃO AT/RD",
+            "nome": "COLABORADOR 439",
+            "matricula": "",
+            "participantes": 9
+        },
+        {
+            "data": "2026-08-31",
+            "regional": "SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "Antonio Roberto",
+            "matricula": "",
+            "participantes": 8
+        },
+        {
+            "data": "2026-08-31",
+            "regional": "CENTRO SUL",
+            "area": "SERVIÇO DE REDE",
+            "nome": "José Robério",
+            "matricula": "",
+            "participantes": 21
         }
     ]
 }
