@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "31/08/2026 14:30",
+    "atualizado_em": "31/08/2026 19:07",
     "inspetores": [
         {
             "matricula": "INSPETOR_01",
@@ -11860,6 +11860,26 @@
         },
         {
             "matricula": "INSPETOR_22",
+            "data": "2026-08-31"
+        },
+        {
+            "matricula": "INSPETOR_39",
+            "data": "2026-08-29"
+        },
+        {
+            "matricula": "INSPETOR_39",
+            "data": "2026-08-31"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-08-31"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-08-31"
+        },
+        {
+            "matricula": "INSPETOR_28",
             "data": "2026-08-31"
         }
     ]
