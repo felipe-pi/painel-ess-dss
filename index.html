@@ -6,7 +6,7 @@
 
     <title>Painel ESS</title>
 
-    <link rel="stylesheet" href="./assents/css/style.css?v=20260716-subarea1" />
+    <link rel="stylesheet" href="./assents/css/style.css?v=20260831-filtros1" />
 
     <link
       rel="stylesheet"
@@ -63,12 +63,13 @@
             placeholder="Digite matricula ou nome"
           />
 
-          <select id="areaFiltro">
-            <option value="">Todas as areas</option>
-            <option value="STC">STC</option>
-            <option value="MANUTENCAO">Manutencao</option>
-            <option value="RECUPERACAO">Recuperacao</option>
-          </select>
+          <details id="areaFiltro" class="filtro-multiselect">
+            <summary>
+              <span id="areaFiltroRotulo">Todas as áreas</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <div id="areaOpcoes" class="filtro-multiselect-opcoes"></div>
+          </details>
 
           <select id="subareaFiltro" class="filtro-subarea hidden">
             <option value="">Todas as subdivisoes</option>
@@ -79,6 +80,11 @@
             <option value="Ciclo+10">Ciclo+10</option>
             <option value="Inspeção">Inspecao</option>
           </select>
+
+          <label class="filtro-checkbox-status">
+            <input type="checkbox" id="statusAbaixoFiltro" />
+            <span>Somente abaixo do esperado</span>
+          </label>
 
           <div class="filtros-data">
             <input type="date" id="dataInicio" />
@@ -129,6 +135,6 @@
       </div>
     </main>
 
-    <script src="./assents/js/app.js?v=20260716-subarea1"></script>
+    <script src="./assents/js/app.js?v=20260831-filtros1"></script>
   </body>
 </html>

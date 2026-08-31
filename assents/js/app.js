@@ -42,22 +42,43 @@ function definirMesAtual() {
 }
 
 function preencherAreas() {
-  const select = document.getElementById('areaFiltro');
+  const opcoes = document.getElementById('areaOpcoes');
 
   const areas = [
     ...new Set(inspetores.map((i) => i.area).filter(Boolean)),
   ].sort();
 
-  select.innerHTML = `<option value="">Todas as áreas</option>`;
-
-  areas.forEach((area) => {
-    const option = document.createElement('option');
-    option.value = area;
-    option.textContent = area;
-    select.appendChild(option);
-  });
+  opcoes.innerHTML = areas
+    .map(
+      (area) => `
+        <label class="filtro-multiselect-opcao">
+          <input type="checkbox" name="areaFiltroOpcao" value="${area}" />
+          <span>${area}</span>
+        </label>
+      `,
+    )
+    .join('');
 
   preencherSubareas();
+  atualizarRotuloAreas();
+}
+
+function obterAreasSelecionadas() {
+  return [...document.querySelectorAll('input[name="areaFiltroOpcao"]:checked')]
+    .map((checkbox) => checkbox.value);
+}
+
+function atualizarRotuloAreas() {
+  const areasSelecionadas = obterAreasSelecionadas();
+  const rotulo = document.getElementById('areaFiltroRotulo');
+
+  if (areasSelecionadas.length === 0) {
+    rotulo.textContent = 'Todas as áreas';
+  } else if (areasSelecionadas.length === 1) {
+    rotulo.textContent = areasSelecionadas[0];
+  } else {
+    rotulo.textContent = `${areasSelecionadas.length} áreas selecionadas`;
+  }
 }
 
 function areaEhManutencao(area) {
@@ -89,9 +110,9 @@ function preencherSubareas() {
 }
 
 function atualizarVisibilidadeSubarea() {
-  const areaSelecionada = document.getElementById('areaFiltro').value;
+  const areasSelecionadas = obterAreasSelecionadas();
   const subareaFiltro = document.getElementById('subareaFiltro');
-  const deveMostrar = areaEhManutencao(areaSelecionada);
+  const deveMostrar = areasSelecionadas.some(areaEhManutencao);
 
   subareaFiltro.classList.toggle('hidden', !deveMostrar);
 
@@ -226,8 +247,9 @@ function obterStatusTexto(status) {
 
 function aplicarFiltros() {
   const busca = document.getElementById('busca').value.toLowerCase();
-  const areaSelecionada = document.getElementById('areaFiltro').value;
+  const areasSelecionadas = obterAreasSelecionadas();
   const subareaSelecionada = document.getElementById('subareaFiltro').value;
+  const somenteAbaixo = document.getElementById('statusAbaixoFiltro').checked;
   const classificacaoSelecionada = document.getElementById(
     'classificacaoFiltro',
   ).value;
@@ -291,8 +313,8 @@ function aplicarFiltros() {
     };
   });
 
-  if (areaSelecionada) {
-    painel = painel.filter((i) => i.area === areaSelecionada);
+  if (areasSelecionadas.length > 0) {
+    painel = painel.filter((i) => areasSelecionadas.includes(i.area));
   }
 
   if (subareaSelecionada) {
@@ -303,6 +325,10 @@ function aplicarFiltros() {
     painel = painel.filter(
       (i) => i.classificacao === classificacaoSelecionada,
     );
+  }
+
+  if (somenteAbaixo) {
+    painel = painel.filter((i) => i.status === 'vermelho');
   }
 
   if (busca) {
@@ -392,8 +418,9 @@ function atualizarCards(dados) {
 
 document.getElementById('busca').addEventListener('keyup', aplicarFiltros);
 document
-  .getElementById('areaFiltro')
+  .getElementById('areaOpcoes')
   .addEventListener('change', () => {
+    atualizarRotuloAreas();
     atualizarVisibilidadeSubarea();
     aplicarFiltros();
   });
@@ -403,15 +430,33 @@ document
 document
   .getElementById('classificacaoFiltro')
   .addEventListener('change', aplicarFiltros);
+document
+  .getElementById('statusAbaixoFiltro')
+  .addEventListener('change', aplicarFiltros);
 document.getElementById('btnAplicar').addEventListener('click', aplicarFiltros);
 document.getElementById('btnLimpar').addEventListener('click', () => {
   document.getElementById('busca').value = '';
-  document.getElementById('areaFiltro').value = '';
+  document
+    .querySelectorAll('input[name="areaFiltroOpcao"]')
+    .forEach((checkbox) => {
+      checkbox.checked = false;
+    });
   document.getElementById('subareaFiltro').value = '';
   document.getElementById('classificacaoFiltro').value = '';
+  document.getElementById('statusAbaixoFiltro').checked = false;
+  document.getElementById('areaFiltro').open = false;
+  atualizarRotuloAreas();
   atualizarVisibilidadeSubarea();
   definirMesAtual();
   aplicarFiltros();
+});
+
+document.addEventListener('click', (event) => {
+  const areaFiltro = document.getElementById('areaFiltro');
+
+  if (areaFiltro.open && !areaFiltro.contains(event.target)) {
+    areaFiltro.open = false;
+  }
 });
 // MENU MOBILE
 const menuBtn = document.getElementById('menuToggle');
