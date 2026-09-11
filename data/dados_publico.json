@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "11/09/2026 07:24",
+    "atualizado_em": "11/09/2026 09:00",
     "inspetores": [
         {
             "matricula": "INSPETOR_01",
@@ -829,6 +829,10 @@
         {
             "matricula": "INSPETOR_27",
             "data": "2026-08-25"
+        },
+        {
+            "matricula": "INSPETOR_27",
+            "data": "2026-09-10"
         },
         {
             "matricula": "INSPETOR_48",
@@ -1743,6 +1747,10 @@
             "data": "2026-09-04"
         },
         {
+            "matricula": "INSPETOR_10",
+            "data": "2026-09-10"
+        },
+        {
             "matricula": "INSPETOR_08",
             "data": "2025-06-09"
         },
@@ -2627,6 +2635,22 @@
             "data": "2026-08-27"
         },
         {
+            "matricula": "INSPETOR_34",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_34",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_34",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_34",
+            "data": "2026-09-10"
+        },
+        {
             "matricula": "INSPETOR_43",
             "data": "2025-06-26"
         },
@@ -3021,6 +3045,14 @@
         {
             "matricula": "INSPETOR_42",
             "data": "2026-09-02"
+        },
+        {
+            "matricula": "INSPETOR_42",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_42",
+            "data": "2026-09-10"
         },
         {
             "matricula": "INSPETOR_41",
@@ -3835,6 +3867,38 @@
             "data": "2026-08-28"
         },
         {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_04",
+            "data": "2026-09-10"
+        },
+        {
             "matricula": "INSPETOR_39",
             "data": "2024-01-22"
         },
@@ -4161,6 +4225,10 @@
         {
             "matricula": "INSPETOR_39",
             "data": "2026-09-04"
+        },
+        {
+            "matricula": "INSPETOR_39",
+            "data": "2026-09-09"
         },
         {
             "matricula": "INSPETOR_39",
@@ -4509,6 +4577,10 @@
         {
             "matricula": "INSPETOR_35",
             "data": "2026-09-02"
+        },
+        {
+            "matricula": "INSPETOR_35",
+            "data": "2026-09-09"
         },
         {
             "matricula": "INSPETOR_03",
@@ -5761,6 +5833,18 @@
         {
             "matricula": "INSPETOR_28",
             "data": "2026-08-31"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-09-10"
         },
         {
             "matricula": "INSPETOR_05",
@@ -8667,6 +8751,10 @@
             "data": "2026-09-09"
         },
         {
+            "matricula": "INSPETOR_07",
+            "data": "2026-09-10"
+        },
+        {
             "matricula": "INSPETOR_36",
             "data": "2025-05-30"
         },
@@ -9401,6 +9489,18 @@
         {
             "matricula": "INSPETOR_12",
             "data": "2026-09-04"
+        },
+        {
+            "matricula": "INSPETOR_12",
+            "data": "2026-09-09"
+        },
+        {
+            "matricula": "INSPETOR_12",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_12",
+            "data": "2026-09-10"
         },
         {
             "matricula": "INSPETOR_15",
@@ -10619,6 +10719,14 @@
             "data": "2026-09-04"
         },
         {
+            "matricula": "INSPETOR_18",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_18",
+            "data": "2026-09-10"
+        },
+        {
             "matricula": "INSPETOR_26",
             "data": "2025-06-30"
         },
@@ -11467,6 +11575,14 @@
             "data": "2026-09-09"
         },
         {
+            "matricula": "INSPETOR_33",
+            "data": "2026-09-10"
+        },
+        {
+            "matricula": "INSPETOR_33",
+            "data": "2026-09-10"
+        },
+        {
             "matricula": "INSPETOR_17",
             "data": "2025-05-30"
         },
@@ -12121,6 +12237,10 @@
         {
             "matricula": "INSPETOR_40",
             "data": "2026-09-02"
+        },
+        {
+            "matricula": "INSPETOR_40",
+            "data": "2026-09-10"
         }
     ]
 }
