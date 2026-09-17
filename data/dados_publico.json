@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "16/09/2026 14:30",
+    "atualizado_em": "17/09/2026 11:32",
     "inspetores": [
         {
             "matricula": "INSPETOR_01",
@@ -1513,6 +1513,10 @@
         {
             "matricula": "INSPETOR_31",
             "data": "2026-09-15"
+        },
+        {
+            "matricula": "INSPETOR_31",
+            "data": "2026-09-16"
         },
         {
             "matricula": "INSPETOR_10",
@@ -5899,6 +5903,14 @@
             "data": "2026-09-15"
         },
         {
+            "matricula": "INSPETOR_28",
+            "data": "2026-09-16"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-09-16"
+        },
+        {
             "matricula": "INSPETOR_05",
             "data": "2025-06-17"
         },
@@ -7303,6 +7315,10 @@
             "data": "2026-09-09"
         },
         {
+            "matricula": "INSPETOR_29",
+            "data": "2026-09-16"
+        },
+        {
             "matricula": "INSPETOR_38",
             "data": "2025-05-30"
         },
@@ -8529,6 +8545,14 @@
         {
             "matricula": "INSPETOR_32",
             "data": "2026-09-14"
+        },
+        {
+            "matricula": "INSPETOR_32",
+            "data": "2026-09-16"
+        },
+        {
+            "matricula": "INSPETOR_32",
+            "data": "2026-09-16"
         },
         {
             "matricula": "INSPETOR_07",
