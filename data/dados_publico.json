@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "29/09/2026 18:00",
+    "atualizado_em": "30/09/2026 14:31",
     "inspetores": [
         {
             "matricula": "INSPETOR_01",
@@ -2699,6 +2699,10 @@
             "data": "2026-09-24"
         },
         {
+            "matricula": "INSPETOR_34",
+            "data": "2026-09-29"
+        },
+        {
             "matricula": "INSPETOR_43",
             "data": "2025-06-26"
         },
@@ -4951,6 +4955,14 @@
             "data": "2026-08-19"
         },
         {
+            "matricula": "INSPETOR_03",
+            "data": "2026-09-29"
+        },
+        {
+            "matricula": "INSPETOR_03",
+            "data": "2026-09-29"
+        },
+        {
             "matricula": "INSPETOR_45",
             "data": "2025-06-17"
         },
@@ -6069,6 +6081,10 @@
         {
             "matricula": "INSPETOR_28",
             "data": "2026-09-23"
+        },
+        {
+            "matricula": "INSPETOR_28",
+            "data": "2026-09-29"
         },
         {
             "matricula": "INSPETOR_05",
@@ -8009,6 +8025,18 @@
         {
             "matricula": "INSPETOR_38",
             "data": "2026-09-04"
+        },
+        {
+            "matricula": "INSPETOR_38",
+            "data": "2026-09-29"
+        },
+        {
+            "matricula": "INSPETOR_38",
+            "data": "2026-09-29"
+        },
+        {
+            "matricula": "INSPETOR_38",
+            "data": "2026-09-29"
         },
         {
             "matricula": "INSPETOR_30",
@@ -10707,6 +10735,10 @@
             "data": "2026-07-20"
         },
         {
+            "matricula": "INSPETOR_25",
+            "data": "2026-09-23"
+        },
+        {
             "matricula": "INSPETOR_18",
             "data": "2024-03-19"
         },
@@ -12679,24 +12711,8 @@
             "data": "2026-09-17"
         },
         {
-            "matricula": "INSPETOR_34",
-            "data": "2026-09-29"
-        },
-        {
-            "matricula": "INSPETOR_38",
-            "data": "2026-09-29"
-        },
-        {
-            "matricula": "INSPETOR_38",
-            "data": "2026-09-29"
-        },
-        {
-            "matricula": "INSPETOR_38",
-            "data": "2026-09-29"
-        },
-        {
-            "matricula": "INSPETOR_25",
-            "data": "2026-09-23"
+            "matricula": "INSPETOR_12",
+            "data": "2026-09-30"
         },
         {
             "matricula": "INSPETOR_48",
