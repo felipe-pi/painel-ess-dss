@@ -121,125 +121,12 @@ function atualizarVisibilidadeSubarea() {
   }
 }
 
-function calcularDiasSobrepostos(inicioA, fimA, inicioB, fimB) {
-  const inicio = new Date(Math.max(inicioA.getTime(), inicioB.getTime()));
-  const fim = new Date(Math.min(fimA.getTime(), fimB.getTime()));
-
-  if (inicio > fim) return 0;
-
-  const msPorDia = 24 * 60 * 60 * 1000;
-
-  return Math.floor((fim - inicio) / msPorDia) + 1;
-}
-
-function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
-  const ano = dataInicio.getFullYear();
-  const mes = dataInicio.getMonth();
-  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
-
-  const periodos = [
-    {
-      inicio: new Date(ano, mes, 1),
-      fim: new Date(ano, mes, 10),
-      meta: Number(inspetor.meta_01_10) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 11),
-      fim: new Date(ano, mes, 20),
-      meta: Number(inspetor.meta_11_20) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 21),
-      fim: new Date(ano, mes, ultimoDia),
-      meta: Number(inspetor.meta_21_31) || 0,
-    },
-  ];
-
-  return periodos.reduce((total, periodo) => {
-    const diasPeriodo = calcularDiasSobrepostos(
-      periodo.inicio,
-      periodo.fim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    const diasSelecionados = calcularDiasSobrepostos(
-      dataInicio,
-      dataFim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
-
-    return total + Math.ceil((periodo.meta / diasPeriodo) * diasSelecionados);
-  }, 0);
-}
-
-function calcularRealizadoAproveitado(
-  inspetor,
-  dataInicio,
-  dataFim,
-  inspecoesInspetor,
-) {
-  const ano = dataInicio.getFullYear();
-  const mes = dataInicio.getMonth();
-  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
-
-  const periodos = [
-    {
-      inicio: new Date(ano, mes, 1),
-      fim: new Date(ano, mes, 10),
-      meta: Number(inspetor.meta_01_10) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 11),
-      fim: new Date(ano, mes, 20),
-      meta: Number(inspetor.meta_11_20) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 21),
-      fim: new Date(ano, mes, ultimoDia),
-      meta: Number(inspetor.meta_21_31) || 0,
-    },
-  ];
-
-  return periodos.reduce((total, periodo) => {
-    const diasPeriodo = calcularDiasSobrepostos(
-      periodo.inicio,
-      periodo.fim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    const diasSelecionados = calcularDiasSobrepostos(
-      dataInicio,
-      dataFim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
-
-    const metaSelecionada = Math.ceil(
-      (periodo.meta / diasPeriodo) * diasSelecionados,
-    );
-
-    const realizadoPeriodo = inspecoesInspetor.filter((inspecao) => {
-      const dataInspecao = new Date(inspecao.data + 'T00:00:00');
-
-      return dataInspecao >= periodo.inicio && dataInspecao <= periodo.fim;
-    }).length;
-
-    return total + Math.min(realizadoPeriodo, metaSelecionada);
-  }, 0);
-}
-
 function obterStatusTexto(status) {
   const textos = {
     verde: 'No prazo',
     amarelo: 'Atenção',
     vermelho: 'Abaixo',
+    sem_meta: 'Sem meta cadastrada',
   };
 
   return textos[status] || 'Abaixo';
@@ -277,14 +164,13 @@ function aplicarFiltros() {
     inspecoesPorMatricula[i.matricula].push(i);
   });
 
-  let painel = inspetores.map((i) => {
+  let painel = inspetores.map((original) => {
+    const i = obterConfiguracaoPeriodo(original, dataInicio, dataFim);
     const inspecoesInspetor = inspecoesPorMatricula[i.matricula] || [];
     const realizado = inspecoesInspetor.length;
     const metaPeriodo = calcularMetaPeriodo(i, dataInicio, dataFim);
     const realizadoAproveitado =
-      i.classificacao === 'Ciclo+10'
-        ? calcularRealizadoAproveitado(i, dataInicio, dataFim, inspecoesInspetor)
-        : Math.min(realizado, metaPeriodo);
+      calcularRealizadoAproveitado(i, dataInicio, dataFim, inspecoesInspetor);
 
     const performanceReal =
       metaPeriodo > 0 ? (realizadoAproveitado / metaPeriodo) * 100 : 0;
@@ -299,7 +185,9 @@ function aplicarFiltros() {
       status = 'amarelo';
     }
 
-    const gap = Math.max(metaPeriodo - realizado, 0);
+    if (i.sem_meta) status = 'sem_meta';
+
+    const gap = Math.max(metaPeriodo - realizadoAproveitado, 0);
 
     return {
       ...i,
@@ -323,7 +211,7 @@ function aplicarFiltros() {
 
   if (classificacaoSelecionada) {
     painel = painel.filter(
-      (i) => i.classificacao === classificacaoSelecionada,
+      (i) => i.classificacao.split(' / ').includes(classificacaoSelecionada),
     );
   }
 
@@ -379,9 +267,9 @@ function renderizarTabela(dados) {
         <td>${item.nome}</td>
         <td>${item.area}</td>
         <td><span class="tag">${item.classificacao || '-'}</span></td>
-        <td>${item.meta_periodo}</td>
+        <td>${item.sem_meta ? 'Sem meta' : item.meta_periodo}</td>
         <td>${item.realizado}</td>
-        <td>${item.performance}%</td>
+        <td>${item.sem_meta ? '—' : item.performance + '%'}</td>
         <td>
           <span class="status-badge ${item.status}">
             <span class="status ${item.status}"></span>
@@ -398,6 +286,7 @@ function renderizarTabela(dados) {
 function atualizarCards(dados) {
   const colaboradores = dados.length;
 
+  const metasCompletas = dados.every(item => !item.sem_meta);
   const meta = dados.reduce((soma, item) => soma + item.meta_periodo, 0);
 
   const realizado = dados.reduce((soma, item) => soma + item.realizado, 0);
@@ -410,10 +299,10 @@ function atualizarCards(dados) {
     meta > 0 ? Math.min((realizadoAproveitado / meta) * 100, 100) : 0;
 
   document.getElementById('colaboradores').innerHTML = colaboradores;
-  document.getElementById('metaGeral').innerHTML = meta;
+  document.getElementById('metaGeral').innerHTML = metasCompletas ? meta : 'Sem meta';
   document.getElementById('realizadoGeral').innerHTML = realizado;
   document.getElementById('performanceGeral').innerHTML =
-    performance.toFixed(1) + '%';
+    metasCompletas ? performance.toFixed(1) + '%' : '—';
 }
 
 document.getElementById('busca').addEventListener('keyup', aplicarFiltros);

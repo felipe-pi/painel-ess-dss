@@ -910,6 +910,15 @@ a:hover {
   color: var(--red);
 }
 
+.status-badge.sem_meta {
+  background: #eef0f3;
+  color: #526071;
+}
+
+.status.sem_meta {
+  background: #526071;
+}
+
 .verde {
   background: var(--green);
 }

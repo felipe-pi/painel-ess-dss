@@ -6,7 +6,7 @@ const fimParam = params.get('fim');
 fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
   .then((response) => response.json())
   .then((data) => {
-    const inspetor = data.inspetores.find(
+    let inspetor = data.inspetores.find(
       (x) => x.matricula.trim().toUpperCase() === matricula,
     );
 
@@ -45,12 +45,12 @@ fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
       );
     });
 
+    inspetor = obterConfiguracaoPeriodo(inspetor, inicio, fim);
+
     const metaPeriodo = calcularMetaPeriodo(inspetor, inicio, fim);
     const realizado = inspecoesInspetor.length;
     const realizadoAproveitado =
-      inspetor.classificacao === 'Ciclo+10'
-        ? calcularRealizadoAproveitado(inspetor, inicio, fim, inspecoesInspetor)
-        : Math.min(realizado, metaPeriodo);
+      calcularRealizadoAproveitado(inspetor, inicio, fim, inspecoesInspetor);
 
     const performanceReal =
       metaPeriodo > 0 ? (realizadoAproveitado / metaPeriodo) * 100 : 0;
@@ -61,44 +61,19 @@ fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
 
     document.getElementById('matricula').innerHTML = inspetor.matricula;
     document.getElementById('nome_inspetor').innerHTML = inspetor.nome;
-    document.getElementById('meta_mes').innerHTML = metaPeriodo;
+    document.getElementById('meta_mes').innerHTML = inspetor.sem_meta ? 'Sem meta cadastrada' : metaPeriodo;
     document.getElementById('realizado').innerHTML = realizado;
     document.getElementById('performance').innerHTML =
-      performance.toFixed(1) + '%';
-    document.getElementById('gap').innerHTML = gap;
+      inspetor.sem_meta ? '—' : performance.toFixed(1) + '%';
+    document.getElementById('gap').innerHTML = inspetor.sem_meta ? '—' : gap;
 
-    const real_01_10 = inspecoesInspetor.filter((i) => {
-      const dia = Number(i.data.split('-')[2]);
-      return dia >= 1 && dia <= 10;
-    }).length;
-
-    const real_11_20 = inspecoesInspetor.filter((i) => {
-      const dia = Number(i.data.split('-')[2]);
-      return dia >= 11 && dia <= 20;
-    }).length;
-
-    const real_21_31 = inspecoesInspetor.filter((i) => {
-      const dia = Number(i.data.split('-')[2]);
-      return dia >= 21 && dia <= 31;
-    }).length;
-
-    const periodos = [
-      {
-        nome: '01-10',
-        meta: inspetor.meta_01_10,
-        realizado: real_01_10,
-      },
-      {
-        nome: '11-20',
-        meta: inspetor.meta_11_20,
-        realizado: real_11_20,
-      },
-      {
-        nome: '21-31',
-        meta: inspetor.meta_21_31,
-        realizado: real_21_31,
-      },
-    ];
+    const periodos = obterPeriodosMetas(inspetor, inicio, fim).map(periodo => ({
+      ...periodo,
+      realizado: inspecoesInspetor.filter(item => {
+        const data = new Date(item.data + 'T00:00:00');
+        return data >= periodo.inicio && data <= periodo.fim;
+      }).length,
+    }));
 
     let html = '';
 
@@ -108,129 +83,15 @@ fetch(`./data/dados_publico.json?v=${Date.now()}`, { cache: 'no-store' })
       html += `
         <tr>
           <td>${p.nome}</td>
-          <td>${p.meta}</td>
+          <td>${p.meta === null ? 'Sem meta' : p.meta}</td>
           <td>${p.realizado}</td>
-          <td>${aproveitado}</td>
+          <td>${p.meta === null ? '—' : aproveitado}</td>
         </tr>
       `;
     });
 
     document.getElementById('periodos').innerHTML = html;
   });
-
-function calcularDiasSobrepostos(inicioA, fimA, inicioB, fimB) {
-  const inicio = new Date(Math.max(inicioA.getTime(), inicioB.getTime()));
-  const fim = new Date(Math.min(fimA.getTime(), fimB.getTime()));
-
-  if (inicio > fim) return 0;
-
-  const msPorDia = 24 * 60 * 60 * 1000;
-
-  return Math.floor((fim - inicio) / msPorDia) + 1;
-}
-
-function calcularMetaPeriodo(inspetor, dataInicio, dataFim) {
-  const ano = dataInicio.getFullYear();
-  const mes = dataInicio.getMonth();
-  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
-
-  const periodos = [
-    {
-      inicio: new Date(ano, mes, 1),
-      fim: new Date(ano, mes, 10),
-      meta: Number(inspetor.meta_01_10) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 11),
-      fim: new Date(ano, mes, 20),
-      meta: Number(inspetor.meta_11_20) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 21),
-      fim: new Date(ano, mes, ultimoDia),
-      meta: Number(inspetor.meta_21_31) || 0,
-    },
-  ];
-
-  return periodos.reduce((total, periodo) => {
-    const diasPeriodo = calcularDiasSobrepostos(
-      periodo.inicio,
-      periodo.fim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    const diasSelecionados = calcularDiasSobrepostos(
-      dataInicio,
-      dataFim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
-
-    return total + Math.ceil((periodo.meta / diasPeriodo) * diasSelecionados);
-  }, 0);
-}
-
-function calcularRealizadoAproveitado(
-  inspetor,
-  dataInicio,
-  dataFim,
-  inspecoesInspetor,
-) {
-  const ano = dataInicio.getFullYear();
-  const mes = dataInicio.getMonth();
-  const ultimoDia = new Date(ano, mes + 1, 0).getDate();
-
-  const periodos = [
-    {
-      inicio: new Date(ano, mes, 1),
-      fim: new Date(ano, mes, 10),
-      meta: Number(inspetor.meta_01_10) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 11),
-      fim: new Date(ano, mes, 20),
-      meta: Number(inspetor.meta_11_20) || 0,
-    },
-    {
-      inicio: new Date(ano, mes, 21),
-      fim: new Date(ano, mes, ultimoDia),
-      meta: Number(inspetor.meta_21_31) || 0,
-    },
-  ];
-
-  return periodos.reduce((total, periodo) => {
-    const diasPeriodo = calcularDiasSobrepostos(
-      periodo.inicio,
-      periodo.fim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    const diasSelecionados = calcularDiasSobrepostos(
-      dataInicio,
-      dataFim,
-      periodo.inicio,
-      periodo.fim,
-    );
-
-    if (diasSelecionados === 0 || diasPeriodo === 0) return total;
-
-    const metaSelecionada = Math.ceil(
-      (periodo.meta / diasPeriodo) * diasSelecionados,
-    );
-
-    const realizadoPeriodo = inspecoesInspetor.filter((inspecao) => {
-      const dataInspecao = new Date(inspecao.data + 'T00:00:00');
-
-      return dataInspecao >= periodo.inicio && dataInspecao <= periodo.fim;
-    }).length;
-
-    return total + Math.min(realizadoPeriodo, metaSelecionada);
-  }, 0);
-}
 
 const linkVoltar = document.querySelector('.voltar');
 
