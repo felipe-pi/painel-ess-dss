@@ -1,26 +1,23 @@
-# Metas mensais do painel ESS
+# Base fixa de metas do painel ESS
 
-Na planilha local `scripts/base_inspetores.xlsx`, mantenha uma linha por
-matrícula e mês na aba de inspetores. Preserve as linhas dos meses anteriores.
-Para cadastrar outro mês, acrescente as linhas correspondentes e ajuste a
-classificação, o TOTAL e as metas dos três ciclos de cada colaborador.
+Por orientação de gestão, o painel usa o cadastro de setembro/2026 para todos
+os períodos analisados. O filtro de datas seleciona as inspeções e calcula
+o período, mas não troca as metas nem a classificação dos colaboradores.
 
 A coluna `Referência` aceita uma data do Excel, `MM/AAAA` ou `AAAA-MM`.
-Os nomes de meses por extenso da base atual (como `Setembro` e `Outubro`)
-são interpretados como meses de 2026. Para os próximos anos, inclua o ano
-explicitamente, por exemplo `01/2027`, para preservar o histórico.
-As metas são identificadas pela matrícula e pelo ano/mês; colunas auxiliares
-como `check` não substituem essa chave. O TOTAL deve corresponder à soma das
-três metas. Referências vazias, inválidas e matrículas repetidas no mesmo mês
-interrompem a geração com uma mensagem, antes da consulta ao Snowflake.
+Os nomes de meses por extenso da base atual são interpretados como meses de
+2026. A referência fixa permanece setembro/2026 independentemente do ano
+selecionado no filtro.
+Somente as linhas de setembro/2026 são usadas; outras referências e a coluna
+auxiliar `check` não definem as metas do painel. A planilha é preservada.
+Sem coluna Referência, o cadastro inteiro é considerado fixo. A falta de
+setembro, matrículas duplicadas e metas inválidas interrompem a geração.
 
-O gerador local `scripts/metas_mensais.py` agrupa as referências em
-`metas_por_referencia`. A anonimização mantém esse histórico no JSON público.
-O filtro de datas usa as metas e a classificação de cada mês, mantendo a regra
-de aproveitamento por ciclo para Ciclo+10. Intervalos que atravessam meses
-somam as metas correspondentes; filtros parciais mantêm o rateio dos ciclos.
-Sem referência cadastrada, a tela informa “Sem meta”; não reutiliza a meta de
-outro mês. JSONs antigos, sem histórico mensal, continuam compatíveis.
+O JSON identifica a origem em `referencia_base: "2026-09"`, sem o histórico
+`metas_por_referencia`. Todos os meses usam as mesmas metas e classificação
+de cada colaborador. O aproveitamento por ciclo do Ciclo+10 e o rateio para
+filtros parciais são preservados. Intervalos que atravessam meses acumulam
+a mesma meta fixa em cada mês.
 
 Após salvar a planilha, execute na pasta do projeto:
 

@@ -10,6 +10,7 @@ function obterMesesPeriodo(inicio, fim) {
 }
 
 function obterMetaMensal(inspetor, mes) {
+  if (inspetor.referencia_base) return inspetor; // Cadastro fixo, independente do filtro.
   if (!inspetor.metas_por_referencia) return inspetor; // JSON anterior à migração.
   const referencia = `${mes.getFullYear()}-${String(mes.getMonth() + 1).padStart(2, '0')}`;
   return inspetor.metas_por_referencia[referencia] || null;

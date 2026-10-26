@@ -22,6 +22,13 @@ assert.equal(calcularRealizadoAproveitado(pessoa, data('2026-10-01'), data('2026
 assert.equal(calcularRealizadoAproveitado(pessoa, data('2026-10-06'), data('2026-10-10'), inspecoes), 0);
 const antigo = pessoa.metas_por_referencia['2026-10'];
 assert.equal(calcularMetaPeriodo(antigo, data('2026-10-01'), data('2026-10-31')), 10);
+const fixo = { ...antigo, referencia_base: '2026-09' };
+for (const [inicio, fim] of [['2026-09-01', '2026-09-30'], ['2026-10-01', '2026-10-31'], ['2027-01-01', '2027-01-31']]) {
+  assert.equal(calcularMetaPeriodo(fixo, data(inicio), data(fim)), 10);
+  assert.equal(obterConfiguracaoPeriodo(fixo, data(inicio), data(fim)).classificacao, 'Ciclo+10');
+  assert.equal(obterConfiguracaoPeriodo(fixo, data(inicio), data(fim)).sem_meta, false);
+}
+assert.equal(calcularMetaPeriodo(fixo, data('2026-09-01'), data('2026-10-31')), 20);
 console.log('OK: metas mensais, classificação, ausência, períodos parciais, aproveitamento, ano bissexto e JSON legado.');
 
 async function testarTela(arquivo, mes, esperado) {

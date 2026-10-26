@@ -4,26 +4,7 @@
         {
             "matricula": "INSPETOR_01",
             "nome": "Jose Izidio",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Ciclo+10",
@@ -35,26 +16,7 @@
         {
             "matricula": "INSPETOR_02",
             "nome": "Adelson Silva",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT",
             "classificacao": "Inspeção",
@@ -66,26 +28,7 @@
         {
             "matricula": "INSPETOR_03",
             "nome": "Juscelino Fontenele",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Inspeção",
@@ -97,57 +40,19 @@
         {
             "matricula": "INSPETOR_04",
             "nome": "Anderson Duarte",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_05",
             "nome": "Cassio Araujo",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Inspeção",
@@ -159,57 +64,7 @@
         {
             "matricula": "INSPETOR_06",
             "nome": "Antonio Franco",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
-            "area": "STC",
-            "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
-        },
-        {
-            "matricula": "INSPETOR_07",
-            "nome": "Antonio Amorim",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Ciclo+10",
@@ -219,28 +74,21 @@
             "meta_21_31": 3
         },
         {
+            "matricula": "INSPETOR_07",
+            "nome": "Antonio Amorim",
+            "referencia_base": "2026-09",
+            "area": "STC",
+            "subarea": "STC",
+            "classificacao": "Inspeção",
+            "meta_mes": 2,
+            "meta_01_10": 1,
+            "meta_11_20": 1,
+            "meta_21_31": 0
+        },
+        {
             "matricula": "INSPETOR_08",
             "nome": "Antonio Genildo",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "RECUPERAÇÃO",
             "subarea": "RECUPERAÇÃO",
             "classificacao": "Inspeção",
@@ -252,88 +100,31 @@
         {
             "matricula": "INSPETOR_09",
             "nome": "Kenilson De",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_10",
             "nome": "Antonio Carlos",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_11",
             "nome": "Charles Dos",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT",
             "classificacao": "Inspeção",
@@ -345,26 +136,7 @@
         {
             "matricula": "INSPETOR_12",
             "nome": "Delson Clemente",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Ciclo+10",
@@ -376,26 +148,7 @@
         {
             "matricula": "INSPETOR_13",
             "nome": "Daniel Silva",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "RECUPERAÇÃO",
             "subarea": "RECUPERAÇÃO",
             "classificacao": "Inspeção",
@@ -407,26 +160,7 @@
         {
             "matricula": "INSPETOR_14",
             "nome": "Danrley Veras",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Inspeção",
@@ -438,57 +172,19 @@
         {
             "matricula": "INSPETOR_15",
             "nome": "Elismar Ribeiro",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT/RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 4,
-                    "meta_01_10": 2,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT/RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT/RD",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
+            "classificacao": "Ciclo+10",
+            "meta_mes": 4,
+            "meta_01_10": 2,
             "meta_11_20": 1,
-            "meta_21_31": 0
+            "meta_21_31": 1
         },
         {
             "matricula": "INSPETOR_16",
             "nome": "Denil Vilar",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "RECUPERAÇÃO",
             "subarea": "RECUPERAÇÃO",
             "classificacao": "Inspeção",
@@ -500,26 +196,7 @@
         {
             "matricula": "INSPETOR_17",
             "nome": "Denilson Silva",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Inspeção",
@@ -531,26 +208,7 @@
         {
             "matricula": "INSPETOR_18",
             "nome": "Jaias De",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 8,
-                    "meta_01_10": 3,
-                    "meta_11_20": 3,
-                    "meta_21_31": 2
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 8,
-                    "meta_01_10": 3,
-                    "meta_11_20": 3,
-                    "meta_21_31": 2
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Ciclo+10",
@@ -562,26 +220,7 @@
         {
             "matricula": "INSPETOR_19",
             "nome": "Fabio Rodrigo",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Inspeção",
@@ -593,26 +232,7 @@
         {
             "matricula": "INSPETOR_20",
             "nome": "Felipe Carlos",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT",
             "classificacao": "Inspeção",
@@ -624,26 +244,7 @@
         {
             "matricula": "INSPETOR_21",
             "nome": "Jonatas Rozeno",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 4,
-                    "meta_01_10": 2,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 4,
-                    "meta_01_10": 2,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Ciclo+10",
@@ -655,26 +256,7 @@
         {
             "matricula": "INSPETOR_22",
             "nome": "Francisco Jose",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT",
             "classificacao": "Inspeção",
@@ -686,26 +268,7 @@
         {
             "matricula": "INSPETOR_23",
             "nome": "Francisco Mateus",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "OBRAS",
             "subarea": "OBRAS",
             "classificacao": "Ciclo+10",
@@ -717,26 +280,7 @@
         {
             "matricula": "INSPETOR_24",
             "nome": "Gabriel Lima",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Inspeção",
@@ -748,57 +292,19 @@
         {
             "matricula": "INSPETOR_25",
             "nome": "Lucas Oliveira",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 3,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
+            "classificacao": "Ciclo+10",
+            "meta_mes": 3,
             "meta_01_10": 1,
             "meta_11_20": 1,
-            "meta_21_31": 0
+            "meta_21_31": 1
         },
         {
             "matricula": "INSPETOR_26",
             "nome": "Iannara Silva",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Inspeção",
@@ -810,26 +316,7 @@
         {
             "matricula": "INSPETOR_27",
             "nome": "Paulo Roberto",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Inspeção",
@@ -841,26 +328,7 @@
         {
             "matricula": "INSPETOR_28",
             "nome": "Victor Jardel",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 8,
-                    "meta_01_10": 3,
-                    "meta_11_20": 3,
-                    "meta_21_31": 2
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 8,
-                    "meta_01_10": 3,
-                    "meta_11_20": 3,
-                    "meta_21_31": 2
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Ciclo+10",
@@ -872,26 +340,7 @@
         {
             "matricula": "INSPETOR_29",
             "nome": "Adelino Gomes",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Ciclo+10",
@@ -903,26 +352,7 @@
         {
             "matricula": "INSPETOR_30",
             "nome": "Joacy Cantanhede",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Inspeção",
@@ -934,26 +364,7 @@
         {
             "matricula": "INSPETOR_31",
             "nome": "Ananias Gomes",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Inspeção",
@@ -965,57 +376,19 @@
         {
             "matricula": "INSPETOR_32",
             "nome": "Carlos Jose",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_33",
             "nome": "Helio Dos",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
             "classificacao": "Inspeção",
@@ -1027,26 +400,7 @@
         {
             "matricula": "INSPETOR_34",
             "nome": "Coriolando Souza",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Ciclo+10",
@@ -1058,88 +412,31 @@
         {
             "matricula": "INSPETOR_35",
             "nome": "Francisco Das",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 8,
-                    "meta_01_10": 3,
-                    "meta_11_20": 3,
-                    "meta_21_31": 2
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 8,
+            "meta_01_10": 3,
+            "meta_11_20": 3,
+            "meta_21_31": 2
         },
         {
             "matricula": "INSPETOR_36",
             "nome": "Isaac Daniel",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_37",
             "nome": "Marcos Williams",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "OBRAS",
             "subarea": "OBRAS",
             "classificacao": "Inspeção",
@@ -1151,26 +448,7 @@
         {
             "matricula": "INSPETOR_38",
             "nome": "Natelson De",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "RECUPERAÇÃO",
             "subarea": "RECUPERAÇÃO",
             "classificacao": "Inspeção",
@@ -1182,88 +460,31 @@
         {
             "matricula": "INSPETOR_39",
             "nome": "Paulo Henrique",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                },
-                "2026-10": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "OBRAS",
             "subarea": "OBRAS",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 10,
+            "meta_01_10": 4,
+            "meta_11_20": 3,
+            "meta_21_31": 3
         },
         {
             "matricula": "INSPETOR_40",
             "nome": "Isaac Valerio",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 8,
-                    "meta_01_10": 3,
-                    "meta_11_20": 3,
-                    "meta_21_31": 2
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
-            "meta_01_10": 1,
-            "meta_11_20": 1,
-            "meta_21_31": 0
+            "classificacao": "Ciclo+10",
+            "meta_mes": 8,
+            "meta_01_10": 3,
+            "meta_11_20": 3,
+            "meta_21_31": 2
         },
         {
             "matricula": "INSPETOR_41",
             "nome": "Ricardo Carvalho",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT",
             "classificacao": "Inspeção",
@@ -1275,57 +496,19 @@
         {
             "matricula": "INSPETOR_42",
             "nome": "Jose Ladislau",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "STC",
-                    "subarea": "STC",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 10,
-                    "meta_01_10": 4,
-                    "meta_11_20": 3,
-                    "meta_21_31": 3
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "STC",
             "subarea": "STC",
-            "classificacao": "Ciclo+10",
-            "meta_mes": 10,
-            "meta_01_10": 4,
-            "meta_11_20": 3,
-            "meta_21_31": 3
+            "classificacao": "Inspeção",
+            "meta_mes": 2,
+            "meta_01_10": 1,
+            "meta_11_20": 1,
+            "meta_21_31": 0
         },
         {
             "matricula": "INSPETOR_43",
             "nome": "Simao Alves",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "AT",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "AT",
             "classificacao": "Inspeção",
@@ -1337,26 +520,7 @@
         {
             "matricula": "INSPETOR_44",
             "nome": "Ulysses Souza",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "OBRAS",
             "subarea": "OBRAS",
             "classificacao": "Inspeção",
@@ -1368,26 +532,7 @@
         {
             "matricula": "INSPETOR_45",
             "nome": "Robert Soares",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "MANUTENÇÃO",
-                    "subarea": "RD",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "MANUTENÇÃO",
             "subarea": "RD",
             "classificacao": "Inspeção",
@@ -1399,26 +544,7 @@
         {
             "matricula": "INSPETOR_46",
             "nome": "Gabriel Christian",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "OBRAS",
             "subarea": "OBRAS",
             "classificacao": "Inspeção",
@@ -1430,26 +556,7 @@
         {
             "matricula": "INSPETOR_47",
             "nome": "Francisco Idelmar",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                },
-                "2026-10": {
-                    "area": "RECUPERAÇÃO",
-                    "subarea": "RECUPERAÇÃO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "RECUPERAÇÃO",
             "subarea": "RECUPERAÇÃO",
             "classificacao": "Inspeção",
@@ -1461,57 +568,19 @@
         {
             "matricula": "INSPETOR_48",
             "nome": "Eduardo Paulo",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "RELACIONAMENTO",
-                    "subarea": "RELACIONAMENTO",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 3,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                },
-                "2026-10": {
-                    "area": "RELACIONAMENTO",
-                    "subarea": "RELACIONAMENTO",
-                    "classificacao": "Inspeção",
-                    "meta_mes": 2,
-                    "meta_01_10": 1,
-                    "meta_11_20": 1,
-                    "meta_21_31": 0
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "RELACIONAMENTO",
             "subarea": "RELACIONAMENTO",
-            "classificacao": "Inspeção",
-            "meta_mes": 2,
+            "classificacao": "Ciclo+10",
+            "meta_mes": 3,
             "meta_01_10": 1,
             "meta_11_20": 1,
-            "meta_21_31": 0
+            "meta_21_31": 1
         },
         {
             "matricula": "INSPETOR_49",
             "nome": "Jeferson Dos",
-            "metas_por_referencia": {
-                "2026-09": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 4,
-                    "meta_01_10": 2,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                },
-                "2026-10": {
-                    "area": "OBRAS",
-                    "subarea": "OBRAS",
-                    "classificacao": "Ciclo+10",
-                    "meta_mes": 4,
-                    "meta_01_10": 2,
-                    "meta_11_20": 1,
-                    "meta_21_31": 1
-                }
-            },
+            "referencia_base": "2026-09",
             "area": "OBRAS",
             "subarea": "OBRAS",
             "classificacao": "Ciclo+10",
