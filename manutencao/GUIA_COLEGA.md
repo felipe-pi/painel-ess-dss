@@ -81,6 +81,11 @@ deve ser recriado após a última coleta de partida, se houver novas atualizaç�
 2. Manter o nome, a aba de dados, os cabeçalhos, os IDs e as datas de execução.
 3. Fechar o arquivo no Excel e executar o bloco abaixo.
 
+Exporte sempre o **mês completo em atualização**, desde o dia 1, e não apenas
+os novos dias. O comparativo PMS usa o maior total mensal entre histórico e
+planilha; um relatório incompleto pode subestimar o total do mês. O histórico
+dos meses anteriores é preservado pelo kit.
+
 ```powershell
 $painel = Join-Path $env:USERPROFILE 'Projetos\painel-ess-dss'
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$painel\manutencao\atualizar_e_publicar_planilha.ps1"
