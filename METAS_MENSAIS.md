@@ -1,36 +1,18 @@
-# Base fixa de metas do painel ESS
+# Metas por referência no painel ESS
 
-Por orientação de gestão, o painel usa o cadastro de setembro/2026 para todos
-os períodos analisados. O filtro de datas seleciona as inspeções e calcula
-o período, mas não troca as metas nem a classificação dos colaboradores.
+O filtro de datas seleciona as inspeções e as metas/classificações cadastradas
+para cada mês em `scripts/base_inspetores.xlsx`. Mantenha uma linha por matrícula
+e referência. Use datas, MM/AAAA ou AAAA-MM para incluir o ano; nomes de meses
+sem ano são interpretados como 2026. O campo check é auxiliar.
 
-A coluna `Referência` aceita uma data do Excel, `MM/AAAA` ou `AAAA-MM`.
-Os nomes de meses por extenso da base atual são interpretados como meses de
-2026. A referência fixa permanece setembro/2026 independentemente do ano
-selecionado no filtro.
-Somente as linhas de setembro/2026 são usadas; outras referências e a coluna
-auxiliar `check` não definem as metas do painel. A planilha é preservada.
-Sem coluna Referência, o cadastro inteiro é considerado fixo. A falta de
-setembro, matrículas duplicadas e metas inválidas interrompem a geração.
+O arquivo local `scripts/base_inspetores_outubro_2026.xlsx` preserva outubro
+da base anterior quando o mês inteiro não está na planilha principal. A
+planilha principal tem prioridade. Preserve ambos no backup dos scripts.
 
-O JSON identifica a origem em `referencia_base: "2026-09"`, sem o histórico
-`metas_por_referencia`. Todos os meses usam as mesmas metas e classificação
-de cada colaborador. O aproveitamento por ciclo do Ciclo+10 e o rateio para
-filtros parciais são preservados. Intervalos que atravessam meses acumulam
-a mesma meta fixa em cada mês.
+Sem cadastro no mês, um colaborador com inspeções continua visível, sem meta
+atribuída. O total de metas usa as referências cadastradas. Intervalos com mais
+de um mês acumulam as metas correspondentes, com rateio para datas parciais.
+A regra de aproveitamento do Ciclo+10 permanece por ciclo.
 
-Após salvar a planilha, execute na pasta do projeto:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\atualizar_jsons.ps1"
-```
-
-Revise os dados gerados antes de executar o script de publicação. A pasta
-`scripts/` é ignorada pelo Git neste projeto: preserve também o gerador e o
-módulo de metas nos backups e nas migrações de máquina.
-
-Teste das regras e integração das telas, sem consultar o Snowflake:
-
-```powershell
-node tests/metas.test.cjs
-```
+A atualização completa usa esse cadastro. O modo sem Snowflake também preserva
+as referências incluídas no kit; gere um kit novo quando a base de partida mudar.

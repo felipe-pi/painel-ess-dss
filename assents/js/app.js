@@ -199,7 +199,7 @@ function aplicarFiltros() {
       gap,
       status,
     };
-  });
+  }).filter(i => !i.sem_meta || i.realizado > 0);
 
   if (areasSelecionadas.length > 0) {
     painel = painel.filter((i) => areasSelecionadas.includes(i.area));
@@ -286,7 +286,7 @@ function renderizarTabela(dados) {
 function atualizarCards(dados) {
   const colaboradores = dados.length;
 
-  const metasCompletas = dados.every(item => !item.sem_meta);
+  const temMetas = dados.some(item => !item.sem_meta);
   const meta = dados.reduce((soma, item) => soma + item.meta_periodo, 0);
 
   const realizado = dados.reduce((soma, item) => soma + item.realizado, 0);
@@ -299,10 +299,10 @@ function atualizarCards(dados) {
     meta > 0 ? Math.min((realizadoAproveitado / meta) * 100, 100) : 0;
 
   document.getElementById('colaboradores').innerHTML = colaboradores;
-  document.getElementById('metaGeral').innerHTML = metasCompletas ? meta : 'Sem meta';
+  document.getElementById('metaGeral').innerHTML = temMetas ? meta : 'Sem meta';
   document.getElementById('realizadoGeral').innerHTML = realizado;
   document.getElementById('performanceGeral').innerHTML =
-    metasCompletas ? performance.toFixed(1) + '%' : '—';
+    temMetas ? performance.toFixed(1) + '%' : '—';
 }
 
 document.getElementById('busca').addEventListener('keyup', aplicarFiltros);

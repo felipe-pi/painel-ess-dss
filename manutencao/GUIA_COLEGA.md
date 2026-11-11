@@ -1,8 +1,8 @@
 # Atualizar o painel durante as férias, sem Snowflake
 
 O repositório é `felipe-pi/painel-ess-dss` e sua branch principal é **master**.
-O modo por planilha atualiza ESS e Altas Horas, mantém a base fixa de
-setembro/2026 e preserva o DSS com a data de sua última coleta.
+O modo por planilha atualiza ESS e Altas Horas, mantém as metas e classificações por mês
+do cadastro de partida e preserva o DSS com a data de sua última coleta.
 
 ## 1. Liberar o acesso no GitHub (Felipe)
 

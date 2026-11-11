@@ -20,8 +20,8 @@ def montar_base(projeto):
         esperado = {(mapa[m], d): n for (m, d), n in contagens(privado['inspecoes']).items()}
         if esperado != dict(contagens(publico['inspecoes'])):
             raise ValueError('Inspeções privadas e públicas estão divergentes; atualize as bases antes de preparar o kit.')
-    if not all(i.get('referencia_base') == '2026-09' for i in dados['inspetores']):
-        raise ValueError('O cadastro de partida deve usar a base fixa de setembro/2026.')
+    if not all(i.get('metas_por_referencia') or i.get('referencia_base') for i in dados['inspetores']):
+        raise ValueError('O cadastro de partida precisa conter as referências de metas.')
     matriculas = {i['matricula'] for i in dados['inspetores']}
     total = contagens(dados['inspecoes'])
     for chave, quantidade in contagens(altas['inspecoes']).items():

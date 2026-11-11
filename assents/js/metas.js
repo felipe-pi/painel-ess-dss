@@ -24,7 +24,7 @@ function obterConfiguracaoPeriodo(inspetor, inicio, fim) {
     ...inspetor,
     ...(presentes[0] || {}),
     classificacao: classificacoes.join(' / ') || 'Sem meta',
-    sem_meta: metas.length === 0 || presentes.length !== metas.length,
+    sem_meta: presentes.length === 0,
   };
 }
 
