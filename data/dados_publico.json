@@ -1,5 +1,5 @@
 {
-    "atualizado_em": "26/11/2026 10:48",
+    "atualizado_em": "26/11/2026 17:22",
     "modo_atualizacao": "planilha",
     "base_historica_id": "0b26f4f9ebb0fbf7090fcc23860c2f32782e8db89c7cdaf64d365c55d9ac206b",
     "base_historica_em": "16/11/2026 08:27",
@@ -2306,6 +2306,10 @@
             "data": "2026-11-25"
         },
         {
+            "matricula": "INSPETOR_27",
+            "data": "2026-11-25"
+        },
+        {
             "matricula": "INSPETOR_48",
             "data": "2024-03-05"
         },
@@ -3084,6 +3088,10 @@
         {
             "matricula": "INSPETOR_31",
             "data": "2026-11-19"
+        },
+        {
+            "matricula": "INSPETOR_31",
+            "data": "2026-11-26"
         },
         {
             "matricula": "INSPETOR_10",
@@ -14640,6 +14648,10 @@
         {
             "matricula": "INSPETOR_21",
             "data": "2026-11-13"
+        },
+        {
+            "matricula": "INSPETOR_21",
+            "data": "2026-11-26"
         },
         {
             "matricula": "INSPETOR_33",
